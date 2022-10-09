@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/slider/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/slider/css/owl.theme.default.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}" />
+
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -77,13 +81,13 @@
                     <div id="menu" class="mainnav col-lg-9 col-md-12 d-none d-lg-block nav-col">
                         <ul class="navbad">
                             <li class="hasDD">
-                                <a class="nav-link" href="#">About Us</a>
+                                <a class="nav-link" href="javascript::void()">About Us</a>
                                 <ul class="submenu">
                                     <li><a href="{{ route('about-us-vision') }}">Vision</a></li>
                                     <li><a href="{{ route('board-of-directors') }}">Board of directors/advisors</a></li>
                                 </ul>
                             </li>
-                            <li class="hasDD"><a href="#">The School </a>
+                            <li class="hasDD"><a href="javascript::void()">The School </a>
                                 <ul>
                                     {{-- <li class="hasDD"><a href="#">Second Level </a>
                                         <ul>
@@ -103,11 +107,12 @@
                             </li>
 
                             <li class="hasDD">
-                                <a class="nav-link" href="#">Get Involved</a>
+                                <a class="nav-link" href="javascript::void()">Get Involved</a>
                                 <ul class="submenu">
                                     <li><a href="{{ route('sponsor-a-student') }}">Sponsor A Student</a></li>
                                     <li><a href="{{ route('sponsor-a-class') }}">Sponsor A Class</a></li>
-                                    <li><a href="{{ route('gift-student-sponsorship') }}">Gift a Student Sponsorship</a></li>
+                                    <li><a href="{{ route('gift-student-sponsorship') }}">Gift a Student
+                                            Sponsorship</a></li>
                                 </ul>
                             </li>
 
@@ -115,7 +120,8 @@
                                 <a class="nav-link" href="{{ route('contact-us') }}">Contact US</a>
                             </li>
                             <li class="nav-item">
-                                <a target="_blank" class="nav-link btn btn-sm btn-success" style="color: #fff !important;"
+                                <a target="_blank" class="nav-link btn btn-sm btn-success"
+                                    style="color: #fff !important;"
                                     href="https://pages.razorpay.com/pl_KPHF6fNpLP5CYh/view">Donate Us</a>
                             </li>
                         </ul>

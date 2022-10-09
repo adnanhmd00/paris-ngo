@@ -4,44 +4,98 @@
                  <div class="col-md-4 col-sm-12">
                      <h2>About Us</h2>
                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi asperiores vel modi
-                         perferendis perspiciatis blanditiis consequuntur vitae facere magnam eum minima ipsum, quia,
-                         eaque debitis repellat fuga saepe laudantium pariatur!
+                         We aim to empower students to become life-long learners who strive for excellence and actively
+                         participate in and contribute to their communities.
                      </p>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente modi esse iure. Vero,
-                         distinctio illum.</p>
+                     <p></p>
                  </div>
                  <div class="col-md-4 col-sm-12">
                      <h2>Useful Links</h2>
-                     <ul class="list-unstyled link-list">
-                         <li><a ui-sref="about" href="#about">About us</a><i class="fa fa-angle-right"></i></li>
-                         <li><a ui-sref="about" href="#gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
-                         <li><a ui-sref="about" href="#blog">Blog</a><i class="fa fa-angle-right"></i></li>
-                         <li><a ui-sref="contact" href="#contact">Contact us</a><i class="fa fa-angle-right"></i></li>
-                     </ul>
+                     <div class="accordion-container">
+                         <div class="set">
+                             <a href="javascript::void()">
+                                 About Us
+                                 <i class="fa fa-plus"></i>
+                             </a>
+                             <div class="content">
+                                 <div class="px-4">
+                                    <a href="">Vision</a>
+                                 </div>
+                                 <div class="px-4">
+                                    <a href="">Board</a>
+                                </div>
+                             </div>
+                         </div>
+                         <div class="set">
+                             <a href="javascript::void()">
+                                 Gallery
+                                 <i class="fa fa-plus"></i>
+                             </a>
+                             <div class="content">
+                                <div class="px-4">
+                                    <a href="">History</a>
+                                 </div>
+                                 <div class="px-4">
+                                    <a href="">Sponsor a class</a>
+                                </div>
+                                <div class="px-4">
+                                   <a href="">Teacher</a>
+                               </div>
+                             </div>
+                         </div>
+                         <div class="set">
+                             <a href="javascript::void()">
+                                 Blog
+                                 <i class="fa fa-plus"></i>
+                             </a>
+                             <div class="content">
+                                <div class="px-4">
+                                    <a href="">Sponsor a student</a>
+                                 </div>
+                                 <div class="px-4">
+                                    <a href="">Sponsor a class</a>
+                                </div>
+                                <div class="px-4">
+                                   <a href="">Gift a student sponsorship</a>
+                               </div>
+                             </div>
+                         </div>
+                         <div class="set">
+                             <a href="{{ route('contact-us') }}">
+                                 Contact Us
+                                 {{-- <i class="fa fa-plus"></i> --}}
+                             </a>
+                             {{-- <div class="content">
+                                 <p> Donec tincidunt consectetur orci at dignissim. Proin auctor aliquam justo, vitae
+                                     luctus odio pretium scelerisque. </p>
+                             </div> --}}
+                         </div>
+                     </div>
+                     {{-- <ul class="list-unstyled link-list"> --}}
+                     {{-- <li><a ui-sref="about" href="#about">About us</a><i class="fa fa-angle-right"></i></li> --}}
+                     {{-- <li><a ui-sref="about" href="#gallery">Gallery</a><i class="fa fa-angle-right"></i></li> --}}
+                     {{-- <li><a ui-sref="about" href="#blog">Blog</a><i class="fa fa-angle-right"></i></li> --}}
+                     {{-- <li><a ui-sref="contact" href="#contact">Contact us</a><i class="fa fa-angle-right"></i></li> --}}
+                     {{-- </ul> --}}
                  </div>
                  <div class="col-md-4 col-sm-12 map-img">
                      <h2>Contact Us</h2>
                      <address class="md-margin-bottom-40">
-                         xyz <br>
-                         Marthandam (K.K District) <br>
-                         Tamil Nadu, IND <br>
-                         Phone: +91 9159669599 <br>
-                         Email: <a href="mailto:info@anybiz.com" class="">info@xyz.in</a><br>
-                         Web: <a href="smart-eye.html" class="">www.xyz.in</a>
+                         C356 <br>
+                         Defence Colony <br>
+                         New Delhi, India <br>
+                         Phone: +91 9930203871 <br>
+                         Email: <a href="mailto:urvashi.sethisodhi@gmail.com"
+                             class="">urvashi.sethisodhi@gmail.com</a><br>
+                         Web: <a href="smart-eye.html" class="">www.romilsewasanstha.org</a>
                      </address>
-
                  </div>
              </div>
-
          </div>
-
-
      </footer>
      <div class="copy">
          <div class="container mb-3">
              <!-- <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by Smarteyeapps</a> -->
-
              <span>
                  <a><i class="fab fa-github"></i></a>
                  <a><i class="fab fa-google-plus-g"></i></a>
@@ -50,10 +104,7 @@
                  <a><i class="fab fa-facebook-f"></i></a>
              </span>
          </div>
-
      </div>
-
-
      </body>
 
 
@@ -100,5 +151,35 @@
                  .removeClass("on");
              $(this).toggleClass("on");
              e.stopPropagation();
+         });
+     </script>
+
+     <script>
+         $(document).ready(function() {
+             $(".set > a").on("click", function() {
+                 if ($(this).hasClass("active")) {
+                     $(this).removeClass("active");
+                     $(this)
+                         .siblings(".content")
+                         .slideUp(200);
+                     $(".set > a i")
+                         .removeClass("fa-minus")
+                         .addClass("fa-plus");
+                 } else {
+                     $(".set > a i")
+                         .removeClass("fa-minus")
+                         .addClass("fa-plus");
+                     $(this)
+                         .find("i")
+                         .removeClass("fa-plus")
+                         .addClass("fa-minus");
+                     $(".set > a").removeClass("active");
+                     $(this).addClass("active");
+                     $(".content").slideUp(200);
+                     $(this)
+                         .siblings(".content")
+                         .slideDown(200);
+                 }
+             });
          });
      </script>

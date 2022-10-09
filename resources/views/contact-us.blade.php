@@ -1,13 +1,15 @@
 @extends('layouts.header')
 @section('content')
-    <div class="page-nav no-margin row">
+    <div class="mt-5 no-margin row">
         <div class="container">
             <div class="row">
-                <h2>Contact Us</h2>
-                <ul>
+                <div style="margin: 0 auto">
+                    <h2>Contact Us</h2>
+                </div>
+                {{-- <ul>
                     <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
                     <li><i class="fas fa-angle-double-right"></i> Contact US</li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </div>
