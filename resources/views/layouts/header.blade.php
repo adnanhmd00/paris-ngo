@@ -8,17 +8,17 @@
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/fav.jpg">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/slider/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/slider/css/owl.theme.default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}" />
 </head>
 
 <body>
     <header class="continer-fluid ">
-        <div class="header-top">
+        {{-- <div class="header-top">
             <div class="container">
                 <div class="row col-det">
                     <div class="col-lg-6 d-none d-lg-block">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div id="menu-jk" class="header-bottom">
             <div class="container">
                 <div class="row nav-row">
@@ -74,39 +74,49 @@
                                     class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
                         </a>
                     </div>
-                    <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
+                    <div id="menu" class="mainnav col-lg-9 col-md-12 d-none d-lg-block nav-col">
                         <ul class="navbad">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#about">About Us</a>
+                            <li class="hasDD">
+                                <a class="nav-link" href="#">About Us</a>
                                 <ul class="submenu">
-                                    <li><a href="index.html">Vision</a></li>
-                                    <li><a href="index-v2.html">Board of directors/advisors</a></li>
+                                    <li><a href="{{ route('about-us-vision') }}">Vision</a></li>
+                                    <li><a href="{{ route('board-of-directors') }}">Board of directors/advisors</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">The School</a>
+                            <li class="hasDD"><a href="#">The School </a>
+                                <ul>
+                                    {{-- <li class="hasDD"><a href="#">Second Level </a>
+                                        <ul>
+                                            <li><a href="#">Illustration</a></li>
+                                            <li class="hasDD"><a href="#">Third level </a>
+                                                <ul>
+                                                    <li><a href="#">jQuery</a></li>
+                                                    <li><a href="#">Vanilla JavaScript</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li> --}}
+                                    <li><a href="{{ route('school-history') }}">History</a></li>
+                                    <li><a href="{{ route('school') }}">School</a></li>
+                                    <li><a href="{{ route('school-teacher') }}">Teacher</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="hasDD">
+                                <a class="nav-link" href="#">Get Involved</a>
                                 <ul class="submenu">
-                                    <li><a href="index.html">History</a></li>
-                                    <li><a href="index-v2.html">School</a></li>
-                                    <li><a href="index-v2.html">Teachers</a></li>
+                                    <li><a href="{{ route('sponsor-a-student') }}">Sponsor A Student</a></li>
+                                    <li><a href="{{ route('sponsor-a-class') }}">Sponsor A Class</a></li>
+                                    <li><a href="{{ route('gift-student-sponsorship') }}">Gift a Student Sponsorship</a></li>
                                 </ul>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="gallery">Get Involved</a>
-                                <ul class="submenu">
-                                    <li><a href="">Sponsor A Student</a></li>
-                                    <li><a href="">Sponsor A Class</a></li>
-                                    <li><a href="teachers">Gift a Student Sponsorship</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact US</a>
+                                <a class="nav-link" href="{{ route('contact-us') }}">Contact US</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-sm btn-success" style="color: #fff !important;"
-                                    href="">Donate Us</a>
+                                <a target="_blank" class="nav-link btn btn-sm btn-success" style="color: #fff !important;"
+                                    href="https://pages.razorpay.com/pl_KPHF6fNpLP5CYh/view">Donate Us</a>
                             </li>
                         </ul>
                     </div>

@@ -37,4 +37,41 @@ class HomeController extends Controller
         $galleries = Gallery::where('status', '1')->get();
         return view('gallery', compact('galleries'));
     }
+
+    public function aboutUs(){
+        return view('about-us-vision');
+    }
+
+    public function boardOfDirectors(){
+        return view('board-of-directors');
+    }
+
+    public function schoolHistory(){
+        return view('school-history');
+    }
+
+    public function school(){
+        return view('school');
+    }
+
+    public function schoolTeacher(){
+        return view('teacher');
+    }
+
+    public function sponsorAStudent(){
+        return view('sponsor-a-student');
+    }
+
+    public function sponsorAClass(){
+        return view('sponsor-a-class');
+    }
+
+    public function giftStudentSponsorship(){
+        return view('student-sponsorship');
+    }
+
+
+    public function contactUs(){
+        return view('contact-us');
+    }
 }

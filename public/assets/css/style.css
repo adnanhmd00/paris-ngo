@@ -800,108 +800,151 @@ header {
 
 
 /* Menu Submenu custom start*/
-
-nav{display: block;}
-#menu ul {
-    list-style: none;
+.mainnav ul {
     margin: 0;
     padding: 0;
-}
-#menu > ul > li {
-    display: block;
-    padding: 0 6px;
-}
-#menu ul li {
+    list-style-type: none;
+    /* background: #e3e3e3; */
     position: relative;
 }
-.header #menu > ul > li > a {
-    line-height: 100px;
-}
-#menu > ul > li.home > a {
-    color: #18ba60;
-}
-#menu > ul > li > a {
+
+.mainnav li {
+    display: inline-block;
     position: relative;
-    display: block;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    color: #222;
+}
+
+.mainnav a {
+    color: #292929;
     text-decoration: none;
-    font-size: 14px;
-    margin: 0 15px;
-    font-weight: 600;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    padding: 15px 30px 15px 15px;
+    display: block;
+    position: relative;
 }
-#menu ul.submenu {
+
+.on>a,
+.mainnav li:hover>a {
+    /* background: lightgrey; */
+}
+
+.mainnav ul ul {
+    z-index: 999;
     position: absolute;
-    left: 0;
-    top: 150%;
-    width: 300px;
-    text-align: left;
-    /* background-color: #222222; */
-    z-index: 9999;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-#menu ul.submenu li:first-child {
-    border-top: none;
-}
-#menu ul.submenu > li {
-    /* border-top: 1px solid #333333; */
-}
-
-#menu ul li ul li {
-    margin-left: 0;
-}
-#menu ul.submenu > li > a {
-    display: block;
-    width: 250px;
-    background-color: white;
-    color: #fff;
-    text-decoration: none;
-    padding: 0 0 0 20px;
-    line-height: 45px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-#menu ul li:hover > ul.submenu {
     top: 100%;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    opacity: 1;
-    color: #222;
-    visibility: visible;
+    min-width: 200px;
+    background: #cecece;
+    display: none;
 }
 
-
-#menu .submenu > li > a{
-  margin-top: -12px;
-  top: 100%;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  opacity: 1;
-  visibility: visible;
+.mainnav ul ul ul {
+    left: 100%;
+    top: 0;
 }
 
-
-#menu .submenu li a:hover {
-  border-top: none;
-  margin-left: 15px;
-  color: #fff !important;
-  background-color: #51be78 !important;
+.mainnav ul ul li {
+    display: block;
+    min-width: 280px;
+    /* background: #e3e3e3; */
 }
+
+.mainnav ul ul ul li {
+    /* background: #eee; */
+}
+
+/* lets not confuse click with hover for now
+.mainnav ul li:hover ul {
+display: block;
+}
+*/
+.mainnav li i {
+    color: #292929;
+    float: right;
+    padding-left: 20px;
+}
+
+.mainnav div {
+    /* background: lightgrey; */
+    color: #292929;
+    font-size: 24px;
+    padding: 0.6em;
+    cursor: pointer;
+    display: none;
+}
+
+.hasDD>a:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    transition: all 0.5s linear;
+}
+
+.mainnav li:hover>a:after {
+    border-top-color: red;
+}
+
+.hasDD.on>a:after {
+    transform: rotate(180deg);
+}
+
+ul ul .hasDD.on>a:after {
+    transform: rotate(-90deg);
+}
+
+@media (min-width: 768px) {
+
+    /* over-ride js inline style*/
+    .mainnav>ul {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainnav div {
+        display: block;
+    }
+
+    .mainnav ul {
+        display: none;
+        position: static;
+        /*background: #e3e3e3;*/
+    }
+
+    .mainnav ul li {
+        display: block;
+    }
+
+    .mainnav ul ul {
+        position: static;
+        /* background: #e3e3e3; */
+    }
+
+    ul ul .hasDD.on>a:after {
+        transform: rotate(-180deg);
+    }
+
+    .hasDD,
+    .hasDD.on {
+        transition: border 0.5s ease;
+    }
+
+    li.hasDD.on {
+        /* border-left: 10px solid #666; */
+        /* margin-left: 10px; */
+    }
+
+    ul ul li.hasDD.on {
+        /* border-color: #aaa; */
+    }
+
+    ul ul ul li.hasDD.on {
+        /* border-color: #ccc; */
+    }
+}
+
 /* Menu submenu custom end */
