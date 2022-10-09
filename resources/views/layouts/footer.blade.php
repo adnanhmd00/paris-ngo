@@ -22,13 +22,13 @@
                                     <a href="">Vision</a>
                                  </div>
                                  <div class="px-4">
-                                    <a href="">Board</a>
+                                    <a href="">Board of Directors</a>
                                 </div>
                              </div>
                          </div>
                          <div class="set">
                              <a href="javascript::void()">
-                                 Gallery
+                                 School
                                  <i class="fa fa-plus"></i>
                              </a>
                              <div class="content">
@@ -45,7 +45,7 @@
                          </div>
                          <div class="set">
                              <a href="javascript::void()">
-                                 Blog
+                                 Get Involved
                                  <i class="fa fa-plus"></i>
                              </a>
                              <div class="content">
