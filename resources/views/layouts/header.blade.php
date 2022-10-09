@@ -72,7 +72,7 @@
                             @if (!empty($logo))
                                 <img src="storage/{{ $logo->logo }}" style="width: 80px;" alt="">
                             @else
-                                <img src="assets/images/logo.png" style="width: 80px;" alt="">
+                                <img src="{{ asset('assets/images/logo.png') }}" style="width: 80px;" alt="">
                             @endif
                             <a data-toggle="collapse" data-target="#menu" href="#menu"><i
                                     class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
