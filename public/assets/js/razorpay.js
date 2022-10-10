@@ -5,7 +5,6 @@ $('#donate').click(function() {
     var amount = $('#amount').val();
     var key = $('#key').val();
     var token = $('#token').val();
-    alert(token)
 
     var options = {
         'key' : key,
