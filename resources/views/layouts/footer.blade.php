@@ -107,20 +107,40 @@
      </div>
      </body>
 
+     <div class="modal" id="rzp">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    {{-- <iframe id="videoContainer" width="800" height="685"
+                        src="https://pages.razorpay.com/pl_KPHF6fNpLP5CYh/view" frameborder="0"
+                        allowfullscreen></iframe> --}}
+                    <div class="text-center">
+                        <img src="{{ asset('assets/images/logo.png') }}" style="width: 100px;"
+                            class="mb-5" alt="">
+                    </div>
+                    {{-- <form action="/pay/coffee"> --}}
+                        <input type="hidden" name="key" id="key" value="{{ env('RAZORPAY_KEY') }}">
+                        <input type="hidden" name="key" id="token" value="{{ csrf_token() }}">
+                    <input type="text" id="name" name="name" value="Adnan"
+                        placeholder="&nbsp;Name" class="form-control"
+                        style="border-radius: 50px;">
+                    <input type="text" id="email" name="email"
+                        value="adnanhmd000@gmail.com" placeholder="&nbsp;Email"
+                        class="form-control" style="border-radius: 50px;">
+                    <input type="text" id="phone" name="phone" value="7701853375"
+                        placeholder="&nbsp;Mobile No." class="form-control"
+                        style="border-radius: 50px;">
+                    <input type="text" id="amount" name="amount" value="100"
+                        placeholder="&nbsp;Amount" class=" form-control"
+                        style="border-radius: 50px;">
+                    <div class="text-center"><button id="donate" class="btn btn-success px-5"
+                            style="border-radius: 50px;">Donate</button></div>
+                    {{-- </form> --}}
+                </div>
 
-     <!-- The Modal -->
-     <div class="modal" id="myModal">
-         <div class="modal-dialog">
-             <div class="modal-content">
-                 <div class="modal-body">
-                     <iframe id="videoContainer" width="800" height="685"
-                         src="https://pages.razorpay.com/pl_KPHF6fNpLP5CYh/view" frameborder="0"
-                         allowfullscreen></iframe>
-                 </div>
-
-             </div>
-         </div>
-     </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -131,6 +151,7 @@
      <script src="{{ asset('assets/plugins/slider/js/owl.carousel.min.js') }}"></script>
      <script src="{{ asset('assets/js/script.js') }}"></script>
      <script src="{{ asset('https://checkout.razorpay.com/v1/checkout.js') }}"></script>
+
      <script src="{{ asset('assets/js/razorpay.js') }}"></script>
 
      <script>

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DonationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +46,5 @@ Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contact-us
 Route::get('product', [DonationController::class, 'index']);
 Route::get('paysuccess', [DonationController::class, 'razorPaySuccess']);
 Route::get('razor-thank-you', [DonationController::class, 'RazorThankYou']);
+
+Route::post('razorpay-payment', [DonationController::class, 'store'])->name('razorpay.payment.store');

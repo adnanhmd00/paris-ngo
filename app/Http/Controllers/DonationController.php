@@ -12,23 +12,18 @@ class DonationController extends Controller
         return view('admin.donations', compact('donations'));
     }
 
-    public function razorPaySuccess(Request $Request){
-        $data = [
-                  'user_id' => '1',
-                  'product_id' => $request->product_id,
-                  'r_payment_id' => $request->payment_id,
-                  'amount' => $request->amount,
-               ];
+    public function store(Request $request){
+        $donation = new Donation();
+        $donation->name = $request->name;
+        $donation->phone = $request->phone;
+        $donation->email = $request->email;
+        $donation->amount = $request->amount;
+        $donation->transaction_id = $request->transaction_id;
+        $donation->gateway = 'razorpay';
+        $donation->save();
 
-        $getId = Payment::insertGetId($data);  
+        // if($donation->save()){
 
-        $arr = array('msg' => 'Payment successfully credited', 'status' => true);
-
-        return Response()->json($arr);    
-    }
-
-    public function RazorThankYou()
-    {
-      return view('thankyou');
+        // }
     }
 }

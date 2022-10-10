@@ -1,36 +1,42 @@
+$('#donate').click(function() {
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var phone = $('#phone').val();
+    var amount = $('#amount').val();
+    var key = $('#key').val();
+    var token = $('#token').val();
+    alert(token)
 
-    var SITEURL = '';
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    var options = {
+        'key' : key,
+        'amount': amount * 100,
+        'name': name,
+        'image': '{{ asset("assets/images/logo.png") }}',
+        'handler': function(response) {
+            // alert(response.razorpay_payment_id);
+            $.post("/razorpay-payment",{
+                name: name,
+                email: email,
+                phone: phone,
+                amount: amount,
+                transaction_id: response.razorpay_payment_id,
+                _token : token,
+            },
+            function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+        },
+        prefill: {
+            'name': name,
+            'email': email,
+            'contact': phone,
+        },
+        'theme': {
+            'color': '#4479BD'
         }
-    });
-    $('body').on('click', '.buy_now', function(e) {
-        var totalAmount = $(this).attr("data-amount");
-        var product_id = $(this).attr("data-id");
-        var options = {
-            "key": "rzp_test_D0rNyMaRKPIjWc",
-            "amount": (totalAmount * 100), // 2000 paise = INR 20
-            "name": "Tutsmake",
-            "description": "Payment",
-            "image": "//www.tutsmake.com/wp-content/uploads/2018/12/cropped-favicon-1024-1-180x180.png",
-            "handler": function(response) {
-                window.location.href = SITEURL + '/' + 'paysuccess?payment_id=' + response
-                    .razorpay_payment_id + '&product_id=' + product_id + '&amount=' + totalAmount;
-            },
-            "prefill": {
-                "contact": '9988665544',
-                "email": 'tutsmake@gmail.com',
-            },
-            "theme": {
-                "color": "#528FF0"
-            }
-        };
-        var rzp1 = new Razorpay(options);
-        rzp1.open();
-        e.preventDefault();
-    });
-    /*document.getElementsClass('buy_plan1').onclick = function(e){
+    };
+
+    var rzp1 = new Razorpay(options);
     rzp1.open();
-    e.preventDefault();
-    }*/
+    // e.preventDefault();
+});

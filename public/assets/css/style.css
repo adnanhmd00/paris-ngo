@@ -240,38 +240,38 @@ body {
 }
 
 .btn-success {
-    background-color: #51be78;
-    border-color: #51be78;
+    background-color: #4479BD;
+    border-color: #4479BD;
 }
 .btn-success:hover {
-    background-color: #51be78 !important;
-    border-color: #51be78 !important;
+    background-color: #4479BD !important;
+    border-color: #4479BD !important;
 }
 .btn-success:active {
-    background-color: #51be78 !important;
-    border-color: #51be78 !important;
+    background-color: #4479BD !important;
+    border-color: #4479BD !important;
 }
 .btn-success:focus {
-    background-color: #51be78 !important;
-    border-color: #51be78 !important;
+    background-color: #4479BD !important;
+    border-color: #4479BD !important;
     box-shadow: none !important;
 }
 
 .btn-primary {
-    background-color: #3cc88f;
-    border-color: #3cc88f;
+    background-color: #4479BD;
+    border-color: #4479BD;
 }
 .btn-primary:hover {
-    background-color: #3cc88f !important;
-    border-color: #3cc88f !important;
+    background-color: #4479BD !important;
+    border-color: #4479BD !important;
 }
 .btn-primary:active {
-    background-color: #3cc88f !important;
-    border-color: #3cc88f !important;
+    background-color: #4479BD !important;
+    border-color: #4479BD !important;
 }
 .btn-primary:focus {
-    background-color: #3cc88f !important;
-    border-color: #3cc88f !important;
+    background-color: #4479BD !important;
+    border-color: #4479BD !important;
     box-shadow: none !important;
 }
 
@@ -426,7 +426,7 @@ header .nav-col .navbad li a {
     border-radius: 50px;
 }
 header .nav-col .navbad li a:hover {
-    background-color: #3cc88f;
+    background-color: #4479BD;
     color: #fff !important;
 }
 header .nav-col .navbad .nav-btn {
@@ -661,7 +661,7 @@ header .small-menu {
 .about-us .image-part .about-quick-box .about-qcard i {
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #3cc88f;
+    color: #4479BD;
 }
 .about-us .image-part .about-quick-box .about-qcard .red {
     color: #ff6b70;
@@ -934,7 +934,7 @@ header .small-menu {
 }
 .our-team .team-row .single-usr .det-o {
     padding: 20px;
-    background-color: #3cc88f;
+    background-color: #4479BD;
 }
 .our-team .team-row .single-usr .det-o h4 {
     color: #fff;
@@ -1000,29 +1000,29 @@ header .small-menu {
     width: 7.5%;
     left: 46.5%;
     height: 45px;
-    border-bottom: 1px solid #3cc88f;
+    border-bottom: 1px solid 4479BD;
 }
 
 .filter-button {
     font-size: 18px;
-    border: 1px solid #3cc88f;
+    border: 1px solid 4479BD;
     border-radius: 5px;
     text-align: center;
-    color: #3cc88f;
+    color: #4479BD;
     margin-bottom: 30px;
 }
 
 .filter-button:hover {
     font-size: 18px;
-    border: 1px solid #3cc88f;
+    border: 1px solid 4479BD;
     border-radius: 5px;
     text-align: center;
     color: #ffffff;
-    background-color: #3cc88f;
+    background-color: #4479BD;
 }
 
 .btn-default:active .filter-button:active {
-    background-color: #3cc88f;
+    background-color: #4479BD;
     color: white;
 }
 
@@ -1043,6 +1043,18 @@ header .small-menu {
     list-style-type: none;
     /* background: #e3e3e3; */
     position: relative;
+}
+
+.submenu-nav{
+    padding: 5px !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    float: left !important;
+}
+
+.link{
+    border-radius: 50px !important;
+    border: none !important;
 }
 
 .mainnav li {
@@ -1122,7 +1134,7 @@ display: block;
 }
 
 .mainnav li:hover > a:after {
-    border-top-color: red;
+    /* border-top-color: red; */
 }
 
 .hasDD.on > a:after {
@@ -1228,7 +1240,7 @@ ul ul .hasDD.on > a:after {
 }
 
 .set > a.active {
-    background-color: #51be78;
+    background-color: #4479BD;
     border-radius: 50px;
     color: #fff;
 }
@@ -1242,25 +1254,25 @@ ul ul .hasDD.on > a:after {
 }
 
 .content a {
-    color: #51be78;
+    color: #4479BD;
     padding: 10px 15px;
     margin: 0;
     color: #333;
 }
 
 .content div:hover {
-    color: #51be78;
+    color: #4479BD;
     padding: 10px;
-    background-color: #51be78;
+    background-color: #4479BD;
     border-radius: 50px;
     margin: 0;
     color: #fff;
 }
 
 .content div {
-    color: #51be78;
+    color: #4479BD;
     padding: 10px;
-    background-color: #51be78;
+    background-color: #4479BD;
     border-radius: 50px;
     margin: 2px;
     color: #fff;
