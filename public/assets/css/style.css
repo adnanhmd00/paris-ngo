@@ -1280,3 +1280,21 @@ ul ul .hasDD.on > a:after {
     color: #fff;
 }
 /* Footer Acccordion end */
+
+.myAlert-top{
+    position: fixed;
+    top: 50px; 
+    right:2%;
+    z-index: 9999;
+    width: 25%;
+}
+
+@media (max-width: 768px) {
+    .myAlert-top{
+        position: fixed;
+        top: 5px; 
+        left:2%;
+        z-index: 9999;
+        width: 96%;
+    }
+}

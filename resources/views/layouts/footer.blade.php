@@ -19,11 +19,11 @@
                              </a>
                              <div class="content">
                                  <div class="px-4">
-                                    <a href="">Vision</a>
+                                     <a href="">Vision</a>
                                  </div>
                                  <div class="px-4">
-                                    <a href="">Board of Directors</a>
-                                </div>
+                                     <a href="">Board of Directors</a>
+                                 </div>
                              </div>
                          </div>
                          <div class="set">
@@ -32,15 +32,15 @@
                                  <i class="fa fa-plus"></i>
                              </a>
                              <div class="content">
-                                <div class="px-4">
-                                    <a href="">History</a>
+                                 <div class="px-4">
+                                     <a href="">History</a>
                                  </div>
                                  <div class="px-4">
-                                    <a href="">Sponsor a class</a>
-                                </div>
-                                <div class="px-4">
-                                   <a href="">Teacher</a>
-                               </div>
+                                     <a href="">Sponsor a class</a>
+                                 </div>
+                                 <div class="px-4">
+                                     <a href="">Teacher</a>
+                                 </div>
                              </div>
                          </div>
                          <div class="set">
@@ -49,15 +49,15 @@
                                  <i class="fa fa-plus"></i>
                              </a>
                              <div class="content">
-                                <div class="px-4">
-                                    <a href="">Sponsor a student</a>
+                                 <div class="px-4">
+                                     <a href="">Sponsor a student</a>
                                  </div>
                                  <div class="px-4">
-                                    <a href="">Sponsor a class</a>
-                                </div>
-                                <div class="px-4">
-                                   <a href="">Gift a student sponsorship</a>
-                               </div>
+                                     <a href="">Sponsor a class</a>
+                                 </div>
+                                 <div class="px-4">
+                                     <a href="">Gift a student sponsorship</a>
+                                 </div>
                              </div>
                          </div>
                          <div class="set">
@@ -108,40 +108,40 @@
      </body>
 
      <div class="modal" id="rzp">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    {{-- <iframe id="videoContainer" width="800" height="685"
+         <div class="modal-dialog modal-dialog-centered">
+             <div class="modal-content">
+                 <div class="modal-body">
+                     {{-- <iframe id="videoContainer" width="800" height="685"
                         src="https://pages.razorpay.com/pl_KPHF6fNpLP5CYh/view" frameborder="0"
                         allowfullscreen></iframe> --}}
-                    <div class="text-center">
-                        <img src="{{ asset('assets/images/logo.png') }}" style="width: 100px;"
-                            class="mb-5" alt="">
-                    </div>
-                    {{-- <form action="/pay/coffee"> --}}
-                        <input type="hidden" name="key" id="key" value="{{ env('RAZORPAY_KEY') }}">
-                        <input type="hidden" name="key" id="token" value="{{ csrf_token() }}">
-                    <input type="text" id="name" name="name" value=""
-                        placeholder="&nbsp;Name" class="form-control"
-                        style="border-radius: 50px;">
-                    <input type="text" id="email" name="email"
-                        value="" placeholder="&nbsp;Email"
-                        class="form-control" style="border-radius: 50px;">
-                    <input type="text" id="phone" name="phone" value=""
-                        placeholder="&nbsp;Mobile No." class="form-control"
-                        style="border-radius: 50px;">
-                    <input type="text" id="amount" name="amount" value=""
-                        placeholder="&nbsp;Amount" class=" form-control"
-                        style="border-radius: 50px;">
-                    <div class="text-center"><button id="donate" class="btn btn-success px-5"
-                            style="border-radius: 50px;">Donate</button></div>
-                    {{-- </form> --}}
-                </div>
+                     <div class="text-center">
+                         <img src="{{ asset('assets/images/logo.png') }}" style="width: 100px;" class="mb-5"
+                             alt="">
+                     </div>
+                     {{-- <form action="/pay/coffee"> --}}
+                     <input type="hidden" name="key" id="key" value="{{ env('RAZORPAY_KEY') }}">
+                     <input type="hidden" name="key" id="token" value="{{ csrf_token() }}">
+                     <input type="text" id="name" name="name" value="" placeholder="&nbsp;Name"
+                         class="form-control" style="border-radius: 50px;" required>
+                     <input type="text" id="email" name="email" value="" placeholder="&nbsp;Email"
+                         class="form-control" style="border-radius: 50px;" required>
+                     <input type="text" id="phone" name="phone" value="" placeholder="&nbsp;Mobile No."
+                         class="form-control" style="border-radius: 50px;" required>
+                     <input type="text" id="amount" name="amount" value="" placeholder="&nbsp;Amount"
+                         class=" form-control" style="border-radius: 50px;" required>
+                     <div class="text-center"><button id="donate" class="btn btn-success px-5"
+                             style="border-radius: 50px;">Donate</button></div>
+                     {{-- </form> --}}
+                 </div>
 
-            </div>
-        </div>
-    </div>
+             </div>
+         </div>
+     </div>
 
+     <div class="myAlert-top alert alert-success">
+         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+         <strong>Success!</strong> Thank You For Your Donation! A confirmation mail has been sent on your email address.
+     </div>
 
 
      <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
@@ -203,4 +203,13 @@
                  }
              });
          });
+     </script>
+
+     <script>
+         function myAlertTop() {
+             $(".myAlert-top").show();
+             setTimeout(function() {
+                 $(".myAlert-top").hide();
+             }, 2000);
+         }
      </script>
