@@ -83,8 +83,8 @@
                             <li class="hasDD">
                                 <a class="nav-link" href="javascript::void(0)">About Us</a>
                                 <ul class="submenu" style="background-color: #fff">
-                                    <li class="submenu-nav"><a class="link" href="{{ route('about-us-vision') }}">Vision</a></li>
-                                    <li class="submenu-nav"><a class="link" href="{{ route('board-of-directors') }}">Board of directors/advisors</a></li>
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('about-us-vision') }}">Vision</a></li>
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('board-of-directors') }}">Board of directors/advisors</a></li>
                                 </ul>
                             </li>
                             <li class="hasDD"><a href="javascript::void(0)">The School </a>
@@ -100,18 +100,18 @@
                                             </li>
                                         </ul>
                                     </li> --}}
-                                    <li class="submenu-nav"><a class="link" href="{{ route('school-history') }}">History</a></li>
-                                    <li class="submenu-nav"><a class="link" href="{{ route('school') }}">School</a></li>
-                                    <li class="submenu-nav"><a class="link" href="{{ route('school-teacher') }}">Teacher</a></li>
+                                    <li class="submenu-nav"><a style="padding:5px;" style="padding: 10px !important;" class="link" href="{{ route('school-history') }}">History</a></li>
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('school') }}">School</a></li>
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('school-teacher') }}">Teacher</a></li>
                                 </ul>
                             </li>
 
                             <li class="hasDD">
                                 <a class="nav-link" href="javascript::void(0)">Get Involved</a>
                                 <ul class="submenu" style="background-color: #fff">
-                                    <li class="submenu-nav"><a class="link" href="{{ route('sponsor-a-student') }}">Sponsor A Student</a></li>
-                                    <li class="submenu-nav"><a class="link" href="{{ route('sponsor-a-class') }}">Sponsor A Class</a></li>
-                                    <li class="submenu-nav"><a class="link" href="{{ route('gift-student-sponsorship') }}">Gift a Student
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('sponsor-a-student') }}">Sponsor A Student</a></li>
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('sponsor-a-class') }}">Sponsor A Class</a></li>
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('gift-student-sponsorship') }}">Gift a Student
                                             Sponsorship</a></li>
                                 </ul>
                             </li>
