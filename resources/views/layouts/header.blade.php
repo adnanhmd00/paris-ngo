@@ -100,7 +100,7 @@
                                             </li>
                                         </ul>
                                     </li> --}}
-                                    <li class="submenu-nav"><a style="padding:5px;" style="padding: 10px !important;" class="link" href="{{ route('school-history') }}">History</a></li>
+                                    <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('school-history') }}">History</a></li>
                                     <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('school') }}">School</a></li>
                                     <li class="submenu-nav"><a style="padding: 10px !important;" class="link" href="{{ route('school-teacher') }}">Teacher</a></li>
                                 </ul>
