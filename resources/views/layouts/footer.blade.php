@@ -121,16 +121,16 @@
                     {{-- <form action="/pay/coffee"> --}}
                         <input type="hidden" name="key" id="key" value="{{ env('RAZORPAY_KEY') }}">
                         <input type="hidden" name="key" id="token" value="{{ csrf_token() }}">
-                    <input type="text" id="name" name="name" value="Adnan"
+                    <input type="text" id="name" name="name" value=""
                         placeholder="&nbsp;Name" class="form-control"
                         style="border-radius: 50px;">
                     <input type="text" id="email" name="email"
-                        value="adnanhmd000@gmail.com" placeholder="&nbsp;Email"
+                        value="" placeholder="&nbsp;Email"
                         class="form-control" style="border-radius: 50px;">
-                    <input type="text" id="phone" name="phone" value="7701853375"
+                    <input type="text" id="phone" name="phone" value=""
                         placeholder="&nbsp;Mobile No." class="form-control"
                         style="border-radius: 50px;">
-                    <input type="text" id="amount" name="amount" value="100"
+                    <input type="text" id="amount" name="amount" value=""
                         placeholder="&nbsp;Amount" class=" form-control"
                         style="border-radius: 50px;">
                     <div class="text-center"><button id="donate" class="btn btn-success px-5"
