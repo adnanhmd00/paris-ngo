@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/css/section-image-gallery.css">
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
@@ -25,7 +26,8 @@
         .navigation {
             height: 80px;
             padding: 5px;
-            background: linear-gradient(45deg, #4199fe, #74b4fe);
+            /* background: linear-gradient(45deg, #4199fe, #74b4fe); */
+            background: #4479BD;
         }
 
         .brand {
@@ -209,6 +211,30 @@
                 transform: rotate(-45deg);
             }
         }
+
+
+
+        /* counter start */
+
+        section#counter-stats {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .stats {
+            text-align: center;
+            font-size: 35px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stats .fa {
+            color: #fff;
+            font-size: 60px;
+        }
+
+        /* counter end */
     </style>
 </head>
 
@@ -274,5 +300,29 @@
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 </script>
+
+{{-- counter start --}}
+<script>
+    $('.counting').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        $({
+            countNum: $this.text()
+        }).animate({
+            countNum: countTo
+        }, {
+            duration: 3000,
+            easing: 'linear',
+            step: function() {
+                $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+            }
+        });
+    });
+</script>
+{{-- counter end --}}
 
 </html>

@@ -21,6 +21,9 @@ Route::get('/donation', function () {
     return view('donation-test');
 });
 
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/', [HomeController::class, 'index']);
 Route::get('login', [LoginController::class, 'create'])->name('login');
 Route::post('login', [LoginController::class, 'login'])->name('login');
