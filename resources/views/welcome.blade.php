@@ -76,36 +76,45 @@
     </section>
 
 
-    <div class="panels">
-        <div class="panel panel1">
-            <p>Hey</p>
-            <p>Let's</p>
-            <p>Go</p>
+    <div class="d-none d-lg-block">
+        <div class="panels">
+            <div class="panel panel1">
+                <p></p>
+                <p>Let's</p>
+                <p></p>
+            </div>
+            <div class="panel panel2">
+                <p></p>
+                <p>Have</p>
+                {{-- <p>Take</p> --}}
+                <p></p>
+            </div>
+            <div class="panel panel3">
+                <p></p>
+                <p>Them</p>
+                {{-- <p>It</p> --}}
+                <p></p>
+            </div>
+            <div class="panel panel4">
+                <p></p>
+                <p>Keep</p>
+                {{-- <p>All</p> --}}
+                <p></p>
+            </div>
+            <div class="panel panel5">
+                <p></p>
+                <p>Smiling</p>
+                {{-- <p>In</p> --}}
+                <p></p>
+            </div>
         </div>
-        <div class="panel panel2">
-            <p>Give</p>
-            <p>Have</p>
-            {{-- <p>Take</p> --}}
-            <p>Receive</p>
-        </div>
-        <div class="panel panel3">
-            <p>Experience</p>
-            <p>Them</p>
-            {{-- <p>It</p> --}}
-            <p>Today</p>
-        </div>
-        <div class="panel panel4">
-            <p>Give</p>
-            <p>Keep</p>
-            {{-- <p>All</p> --}}
-            <p>You Can</p>
-        </div>
-        <div class="panel panel5">
-            <p>Life</p>
-            <p>Smiling</p>
-            {{-- <p>In</p> --}}
-            <p>Motion</p>
-        </div>
+    </div>
+
+    <div class="d-sm-block d-lg-none">
+        <div class="container">
+            <img src="{{ asset('assets/images/panel/child-img-1.webp') }}" alt="Snow" style="width:100%;">
+            <div class="centered text-center"><h3 class="font-weight-bolder">Lets <br> Have <br> Them <br> Keep <br> Smiling</h3></div>
+          </div>
     </div>
 
     <section class="container-fluid" id="about-us">

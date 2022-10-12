@@ -25,6 +25,21 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        /* mobile image cover */
+
+        /* Centered text */
+        .centered {
+            position: absolute;
+            top: 30%;
+            /* margin: 0 auto; */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Amatic SC', cursive;
+            color: #fff;
+            font-weight: 900;
+        }
+
+        /* mobiel image cover */
         .navigation {
             height: 80px;
             padding: 5px;
@@ -104,11 +119,11 @@
             border-radius: 20px;
             width: 100%;
             position: relative
-            /* for white background li */
+                /* for white background li */
 
         }
 
-        nav ul li ul{
+        nav ul li ul {
             min-width: 300px;
         }
 
@@ -286,11 +301,101 @@
         }
 
         /* counter end */
+
+
+
+        /* Footer Accordion start */
+        .accordion-container {
+            position: relative;
+            max-width: 500px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+        .accordion-container>h2 {
+            text-align: center;
+            color: #fff;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            /* border-bottom: 1px solid #ddd; */
+        }
+
+        .set {
+            position: relative;
+            width: 100%;
+            height: auto;
+            color: #fff;
+            /* background-color: #f5f5f5; */
+        }
+
+        .set>a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            /* font-weight: 600; */
+            /* border-bottom: 1px solid #ddd; */
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+
+        .set>a i {
+            float: right;
+            margin-top: 2px;
+        }
+
+        .set>a.active {
+            background-color: #4479BD;
+            border-radius: 50px;
+            color: #fff;
+        }
+
+
+        .content {
+            color: #fff !important;
+            /* background-color: #fff; */
+            padding: 2px;
+            border-bottom: 1px solid #ddd;
+            display: none;
+        }
+
+        .content a {
+            color: #4479BD;
+            padding: 10px 15px;
+            margin: 0;
+            color: #333;
+        }
+
+        .content div:hover {
+            color: #4479BD;
+            padding: 10px;
+            /* background-color: #4479BD; */
+            background: #fff;
+            border-radius: 50px;
+            margin: 0;
+            /* color: #fff; */
+            color: #4479bd;
+        }
+
+        .content div {
+            color: #4479BD;
+            padding: 10px;
+            /* background-color: #4479BD; */
+            background: #fff;
+            border-radius: 50px;
+            margin: 2px;
+            /* color: #fff; */
+        }
+
+        /* Footer Acccordion end */
     </style>
 </head>
 
 <body>
     @yield('content')
+    @include('layouts.foot')
 </body>
 
 
@@ -374,5 +479,38 @@
     });
 </script>
 {{-- counter end --}}
+
+{{-- accordion start --}}
+
+<script>
+    $(document).ready(function() {
+        $(".set > a").on("click", function() {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this)
+                    .siblings(".content")
+                    .slideUp(200);
+                $(".set > a i")
+                    .removeClass("fa-minus")
+                    .addClass("fa-plus");
+            } else {
+                $(".set > a i")
+                    .removeClass("fa-minus")
+                    .addClass("fa-plus");
+                $(this)
+                    .find("i")
+                    .removeClass("fa-plus")
+                    .addClass("fa-minus");
+                $(".set > a").removeClass("active");
+                $(this).addClass("active");
+                $(".content").slideUp(200);
+                $(this)
+                    .siblings(".content")
+                    .slideDown(200);
+            }
+        });
+    });
+</script>
+{{-- accordion end --}}
 
 </html>
