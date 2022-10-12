@@ -5,7 +5,7 @@
             <div class="brand">
                 <a href="#!"><img src="assets/images/logo.png" style="width: 80px" alt=""></a>
             </div>
-            <nav>
+            <nav style="z-index: 99">
                 <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
                 <ul class="nav-list mt-1">
                     {{-- <li>
