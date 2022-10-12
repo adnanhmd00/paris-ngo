@@ -7,13 +7,28 @@
             </div>
             <nav>
                 <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
-                <ul class="nav-list">
-                    <li>
+                <ul class="nav-list mt-1">
+                    {{-- <li>
                         <a href="#!">Home</a>
+                    </li> --}}
+
+                    <li>
+                        <a href="#!">About Us</a>
+                        <ul class="navbar-dropdown">
+                        {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
+                            <li>
+                                <a href="#!">Vision</a>
+                            </li>
+                            <li>
+                                <a href="#!">Board of directors/advisors</a>
+                            </li>
+                        </ul>
                     </li>
+
                     <li>
                         <a href="#!">The School</a>
                         <ul class="navbar-dropdown">
+                        {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
                             <li>
                                 <a href="#!">History</a>
                             </li>
@@ -28,6 +43,7 @@
                     <li>
                         <a href="#!">Get Involved</a>
                         <ul class="navbar-dropdown">
+                        {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
                             <li>
                                 <a href="#!">Sponsor A Student</a>
                             </li>
@@ -43,9 +59,17 @@
                         <a href="#!">Contact Us</a>
                     </li>
 
-                    <button class="btn btn-primary">
+
+                    <li>
+                        <a style="background: #4479bd; color: #fff;" href="#!">Donate</a>
+                    </li>
+                    {{-- <li style="background: #4479bd; border-radius: 20px; color: #fff !important;">
+                        <a style="color: #fff !important;" href="#!">Donate</a>
+                    </li> --}}
+
+                    {{-- <button class="btn btn-primary">
                         Donate
-                    </button>
+                    </button> --}}
                 </ul>
             </nav>
         </div>

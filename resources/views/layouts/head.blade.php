@@ -1,3 +1,5 @@
+{{-- white design from here --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +29,8 @@
             height: 80px;
             padding: 5px;
             /* background: linear-gradient(45deg, #4199fe, #74b4fe); */
-            background: #4479BD;
+            /* background: #4479BD; */
+            background: #fff;
         }
 
         .brand {
@@ -46,7 +49,7 @@
         }
 
         .nav-container {
-            max-width: 1000px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -64,27 +67,68 @@
 
         nav ul li {
             float: left;
+            margin: 0px 10px;
             position: relative;
         }
 
         nav ul li a,
         nav ul li a:visited {
-            display: block;
+            /* display: block;
             padding: 0 20px;
             line-height: 55px;
             color: #fff;
             background: #262626;
+            text-decoration: none; */
+
+            /* for blue background header */
+            /* display: block;
+            padding: 0 20px;
+            line-height: 55px;
+            color: #4479bd;
+            border: 1px solid #4479bd;
+            background: #262626;
             text-decoration: none;
+            margin: 0px 10px;
+            border-radius: 20px; */
+            /* for blue background li */
+            /* for white background li */
+            display: block;
+            padding: 0 20px;
+            line-height: 55px;
+            color: #4479bd;
+            border: 1px solid #4479bd;
+            background: #fff;
+            text-decoration: none;
+            /* margin: 2px 10px; */
+            margin: 0 auto;
+            border-radius: 20px;
+            width: 100%;
+            position: relative
+            /* for white background li */
+
+        }
+
+        nav ul li ul{
+            min-width: 300px;
         }
 
         nav ul li a {
-            background: transparent;
-            color: #FFF;
+            background: #fff;
+            color: #4479bd;
+            text-decoration: none;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
         }
 
         nav ul li a:hover,
         nav ul li a:visited:hover {
-            background: #2581DC;
+            background: #4479bd;
             color: #ffffff;
         }
 
@@ -99,7 +143,10 @@
         }
 
         nav ul li ul li {
-            min-width: 190px;
+            margin: 0 auto;
+            padding: 5px;
+            margin-top: 5px;
+            min-width: 100%;
         }
 
         nav ul li ul li a {
@@ -113,6 +160,9 @@
             z-index: 99;
             background: #fff;
             box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.25);
+            width: 100%;
+            border-radius: 20px;
+            margin: 0 auto;
         }
 
         /* Mobile navigation */
@@ -145,6 +195,7 @@
             }
 
             nav ul li a {
+                margin-top: 20px;
                 padding: 15px;
                 line-height: 20px;
                 background: #262626;
@@ -179,7 +230,7 @@
                 border-radius: 1px;
                 height: 3px;
                 width: 30px;
-                background: #ffffff;
+                background: #4479bd;
                 position: absolute;
                 display: block;
                 content: '';
@@ -254,7 +305,6 @@
 <script>
     (function($) {
         $(function() {
-
             //  open and close nav 
             $('#navbar-toggle').click(function() {
                 $('nav ul').slideToggle();
