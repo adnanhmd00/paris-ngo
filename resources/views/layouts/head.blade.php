@@ -21,11 +21,14 @@
     <title>Romil Seva Sanstha</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+        @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
         body {
+            overflow-x: hidden !important;
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
+            /* font-family: 'Roboto', sans-serif; */
+            font-family: 'Fuzzy Bubbles', cursive;
+
         }
 
         /* mobile image cover */
