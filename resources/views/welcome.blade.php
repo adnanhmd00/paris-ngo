@@ -148,6 +148,28 @@
         </div>
     </header>
 
+    <section id="notes" class="text-center">
+        <div class="wrapper clearfix">
+            <aside class="note-wrap note-yellow">
+                <p>Driving along on the plastic dream,
+                Heart beats fast like a tiny machine</p>
+                <a href="http://youtu.be/vFYaFT0q6Uw">The Mighty Boosh</a>
+            </aside>
+            <aside class="note-wrap note-blue">
+                <p>So we back in the mine, got our pick axe swinging from side to side</p>
+                <a href="http://youtu.be/cPJUBQd-PNM">CaptainSparklez</a>
+            </aside>
+            <aside class="note-wrap note-pink">
+                <p>Ice skating and shit in NORWAY</p>
+                <a href="http://youtu.be/EF1V8HFfpTE">apetor</a>
+            </aside>
+            <aside class="note-wrap note-green">
+                <p>One pill makes you larger,
+                And one pill makes you small</p>
+                <a href="http://youtu.be/i2LhAeFutxk">Jefferson Airplane</a>
+            </aside>
+        </div>
+    </section>
 
     {{-- <section class="container-fluid" id="mission-vision">
         <div class="container mt-5">
