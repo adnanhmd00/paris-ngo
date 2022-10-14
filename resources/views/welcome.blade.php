@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <section class="container-fluid animation-element slide-right" id="about-us">
+    {{-- <section class="container-fluid animation-element slide-right" id="about-us">
         <div class="text-center">
             <div class="row mt-3 h3">
                 <div class="col-md-12 text-center">
@@ -52,14 +52,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section id="vision" class="container-fluid" style="background: #4479bd;">
+    <section id="vision" class="container-fluid">
         <div class="container">
             <div class="starter-template">
                 <div class="row">
                     <div class="col-sm-4">
-                        <section class="hover-div"> 
+                        <section class="hover-div shadow"> 
                             <i class="fa fa-lightbulb fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                             <div class="hover-div_inner">
                                 {{-- <h3><a href="#">Windows</a></h3> --}}
@@ -70,7 +70,8 @@
                         </section>
                     </div>
                     <div class="col-sm-4">
-                        <section class="hover-div"><i class="fa fa-eye fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
+                        <section class="hover-div shadow">
+                            <i class="fa fa-eye fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                             <div class="hover-div_inner">
                                 {{-- <h3><a href="#">Mac</a></h3> --}}
                                 <p class="text-center">We aim to empower students to become life- long learners who strive for excellence and actively participate in and contribute to their communities.</p>
@@ -82,7 +83,8 @@
                         </section>
                     </div>
                     <div class="col-sm-4">
-                        <section class="hover-div"><i class="fa fa-flag fa-light fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
+                        <section class="hover-div shadow">
+                            <i class="fa fa-flag fa-light fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                             <div class="hover-div_inner">
                                 {{-- <h3><a href="#">Mac</a></h3> --}}
                                 <p class="text-center">We aim to empower students to become life- long learners who strive for excellence and actively participate in and contribute to their communities.</p>
@@ -151,22 +153,20 @@
     <section id="notes" class="text-center">
         <div class="wrapper clearfix">
             <aside class="note-wrap note-yellow">
-                <p>Driving along on the plastic dream,
-                Heart beats fast like a tiny machine</p>
-                <a href="http://youtu.be/vFYaFT0q6Uw">The Mighty Boosh</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
+                {{-- <a href="http://youtu.be/vFYaFT0q6Uw">The Mighty Boosh</a> --}}
             </aside>
             <aside class="note-wrap note-blue">
-                <p>So we back in the mine, got our pick axe swinging from side to side</p>
-                <a href="http://youtu.be/cPJUBQd-PNM">CaptainSparklez</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
+                {{-- <a href="http://youtu.be/cPJUBQd-PNM">CaptainSparklez</a> --}}
             </aside>
             <aside class="note-wrap note-pink">
-                <p>Ice skating and shit in NORWAY</p>
-                <a href="http://youtu.be/EF1V8HFfpTE">apetor</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
+                {{-- <a href="http://youtu.be/EF1V8HFfpTE">apetor</a> --}}
             </aside>
             <aside class="note-wrap note-green">
-                <p>One pill makes you larger,
-                And one pill makes you small</p>
-                <a href="http://youtu.be/i2LhAeFutxk">Jefferson Airplane</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
+                {{-- <a href="http://youtu.be/i2LhAeFutxk">Jefferson Airplane</a> --}}
             </aside>
         </div>
     </section>
