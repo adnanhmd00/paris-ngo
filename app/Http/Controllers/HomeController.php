@@ -70,8 +70,15 @@ class HomeController extends Controller
         return view('student-sponsorship');
     }
 
-
     public function contactUs(){
         return view('contact-us');
+    }
+
+    public function termsAndConditions(){
+        return view('terms-and-conditions');
+    }
+
+    public function privacyPolicy(){
+        return view('privacy-policy');
     }
 }

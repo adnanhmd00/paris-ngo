@@ -40,6 +40,8 @@ Route::get('sponsor-a-student', [HomeController::class, 'sponsorAStudent'])->nam
 Route::get('sponsor-a-class', [HomeController::class, 'sponsorAClass'])->name('sponsor-a-class');
 Route::get('gift-student-sponsorship', [HomeController::class, 'giftStudentSponsorship'])->name('gift-student-sponsorship');
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
+Route::get('terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions');
+Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy');
 
 // Auth::routes();
 

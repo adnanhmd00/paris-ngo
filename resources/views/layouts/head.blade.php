@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/scroll-animation.css">
     <link rel="stylesheet" href="assets/css/section-image-gallery.css">
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
     <title>Romil Seva Sanstha</title>
@@ -390,127 +391,124 @@
         }
 
         /* Footer Acccordion end */
+
+        /* Cards Effect */
+
+        .starter-template {
+            padding: 80px 15px;
+            text-align: center;
+        }
+
+        span.lower-text {
+            color: #ffc300;
+            font-size: 25px;
+            display: block;
+        }
+
+        .hover-div {
+            padding: 20px 20px;
+            text-align: center;
+            min-height: 350px;
+            border-radius: 20px;
+        }
+
+        .hover-div {
+            border-top: 1px solid #f8f8f8;
+            background: #f8f8f8;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            margin: 10px 0px;
+        }
+
+        .hover-div:hover {
+            -webkit-transform: translateY(-20px);
+            -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
+            box-shadow: 0 22px 43px rgba(0, 0, 0, 0.32);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Cards Effect */
     </style>
 </head>
 
 <body>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#!"><img src="assets/images/logo.png" style="width: 80px" alt=""></a>
+            </div>
+            <nav style="z-index: 99">
+                <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list mt-1">
+                    {{-- <li>
+                        <a href="#!">Home</a>
+                    </li> --}}
+
+                    <li>
+                        <a href="#!">About Us</a>
+                        <ul class="navbar-dropdown">
+                            {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
+                            <li>
+                                <a href="#!">Vision</a>
+                            </li>
+                            <li>
+                                <a href="#!">Board of directors/advisors</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#!">The School</a>
+                        <ul class="navbar-dropdown">
+                            {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
+                            <li>
+                                <a href="#!">History</a>
+                            </li>
+                            <li>
+                                <a href="#!">School</a>
+                            </li>
+                            <li>
+                                <a href="#!">Teacher</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Get Involved</a>
+                        <ul class="navbar-dropdown">
+                            {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
+                            <li>
+                                <a href="#!">Sponsor A Student</a>
+                            </li>
+                            <li>
+                                <a href="#!">Sponsor A Class</a>
+                            </li>
+                            <li>
+                                <a href="#!">Gift A Student Sponsorship</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Contact Us</a>
+                    </li>
+
+
+                    <li>
+                        <a style="background: #4479bd; color: #fff;" href="#!">Donate</a>
+                    </li>
+                    {{-- <li style="background: #4479bd; border-radius: 20px; color: #fff !important;">
+                        <a style="color: #fff !important;" href="#!">Donate</a>
+                    </li> --}}
+
+                    {{-- <button class="btn btn-primary">
+                        Donate
+                    </button> --}}
+                </ul>
+            </nav>
+        </div>
+    </section>
     @yield('content')
     @include('layouts.foot')
 </body>
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="assets/js/carousel.js"></script>
-
-<script>
-    (function($) {
-        $(function() {
-            //  open and close nav 
-            $('#navbar-toggle').click(function() {
-                $('nav ul').slideToggle();
-            });
-
-
-            // Hamburger toggle
-            $('#navbar-toggle').on('click', function() {
-                this.classList.toggle('active');
-            });
-
-
-            // If a link has a dropdown, add sub menu toggle.
-            $('nav ul li a:not(:only-child)').click(function(e) {
-                $(this).siblings('.navbar-dropdown').slideToggle("slow");
-
-                // Close dropdown when select another dropdown
-                $('.navbar-dropdown').not($(this).siblings()).hide("slow");
-                e.stopPropagation();
-            });
-
-
-            // Click outside the dropdown will remove the dropdown class
-            $('html').click(function() {
-                $('.navbar-dropdown').hide();
-            });
-        });
-    })(jQuery);
-</script>
-<script>
-    const panels = document.querySelectorAll('.panel');
-
-    function toggleOpen() {
-        this.classList.toggle('open');
-    }
-
-    function toggleActive(e) {
-        if (e.propertyName.includes('flex')) {
-            this.classList.toggle('open-active');
-        }
-    }
-
-    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
-</script>
-
-{{-- counter start --}}
-<script>
-    $('.counting').each(function() {
-        var $this = $(this),
-            countTo = $this.attr('data-count');
-        $({
-            countNum: $this.text()
-        }).animate({
-            countNum: countTo
-        }, {
-            duration: 3000,
-            easing: 'linear',
-            step: function() {
-                $this.text(Math.floor(this.countNum));
-            },
-            complete: function() {
-                $this.text(this.countNum);
-                //alert('finished');
-            }
-        });
-    });
-</script>
-{{-- counter end --}}
-
-{{-- accordion start --}}
-
-<script>
-    $(document).ready(function() {
-        $(".set > a").on("click", function() {
-            if ($(this).hasClass("active")) {
-                $(this).removeClass("active");
-                $(this)
-                    .siblings(".content")
-                    .slideUp(200);
-                $(".set > a i")
-                    .removeClass("fa-minus")
-                    .addClass("fa-plus");
-            } else {
-                $(".set > a i")
-                    .removeClass("fa-minus")
-                    .addClass("fa-plus");
-                $(this)
-                    .find("i")
-                    .removeClass("fa-plus")
-                    .addClass("fa-minus");
-                $(".set > a").removeClass("active");
-                $(this).addClass("active");
-                $(".content").slideUp(200);
-                $(this)
-                    .siblings(".content")
-                    .slideDown(200);
-            }
-        });
-    });
-</script>
-{{-- accordion end --}}
-
-</html>
