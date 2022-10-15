@@ -25,6 +25,10 @@ class AboutUsController extends Controller
             return back()->with('success', 'About Us Updated Successfully');
         }
     }
+
+    public function aboutUs(){
+        return view('about-us');
+    }
 }
      
      

@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mt-5">
     <div class="text-center">
-        <h3 style="color: #4479bd;" class="p-2">History</h3>
+        <h3 style="color: #4479bd;" class="p-2">About Us</h3>
     </div>
     <div class="card rounded p-4">
         <div class="row container-fluid">

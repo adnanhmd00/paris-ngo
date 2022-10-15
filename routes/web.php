@@ -5,6 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\SchoolController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +33,14 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('register', [RegisterController::class, 'create'])->name('register');
 Route::post('register', [RegisterController::class, 'store'])->name('register');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('about-us/vision', [HomeController::class, 'aboutUs'])->name('about-us-vision');
-Route::get('about-us/board-of-directors', [HomeController::class, 'boardOfDirectors'])->name('board-of-directors');
+Route::get('about-us/vision', [AboutUsController::class, 'aboutUs'])->name('about-us-vision');
+Route::get('school/history', [SchoolController::class, 'history'])->name('school-history');
+
+
+
+
+// Route::get('about-us/vision', [HomeController::class, 'aboutUs'])->name('about-us-vision');
+// Route::get('about-us/board-of-directors', [HomeController::class, 'boardOfDirectors'])->name('board-of-directors');
 Route::get('school/history', [HomeController::class, 'schoolHistory'])->name('school-history');
 Route::get('school', [HomeController::class, 'school'])->name('school');
 Route::get('school/teacher', [HomeController::class, 'schoolTeacher'])->name('school-teacher');

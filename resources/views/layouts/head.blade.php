@@ -9,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -22,6 +23,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
         body {
             overflow-x: hidden !important;
             margin: 0;
@@ -436,6 +438,24 @@
         }
 
         /* Cards Effect */
+
+        .myAlert-top {
+            position: fixed;
+            top: 50px;
+            right: 2%;
+            z-index: 9999;
+            width: 25%;
+        }
+
+        @media (max-width: 768px) {
+            .myAlert-top {
+                position: fixed;
+                top: 5px;
+                left: 2%;
+                z-index: 9999;
+                width: 96%;
+            }
+        }
     </style>
 </head>
 
@@ -457,7 +477,7 @@
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
                             <li>
-                                <a href="#!">Vision</a>
+                                <a href="{{ route('about-us-vision') }}">Vision</a>
                             </li>
                             <li>
                                 <a href="#!">Board of directors/advisors</a>
@@ -466,17 +486,17 @@
                     </li>
 
                     <li>
-                        <a href="#!">The School</a>
+                        <a href="#!">Monsoon Kids School</a>
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
                             <li>
-                                <a href="#!">History</a>
+                                <a href="#!">Values</a>
                             </li>
                             <li>
-                                <a href="#!">School</a>
+                                <a href="#!">Students</a>
                             </li>
                             <li>
-                                <a href="#!">Teacher</a>
+                                <a href="#!">Teachers/Staffs</a>
                             </li>
                         </ul>
                     </li>
@@ -485,6 +505,12 @@
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
                             <li>
+                                <a href="" data-toggle="modal" data-target="#donate-box">Donate</a>
+                            </li>
+                            <li>
+                                <a href="">Volunteer</a>
+                            </li>
+                            {{-- <li>
                                 <a href="#!">Sponsor A Student</a>
                             </li>
                             <li>
@@ -492,16 +518,17 @@
                             </li>
                             <li>
                                 <a href="#!">Gift A Student Sponsorship</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
                     <li>
-                        <a href="#!">Contact Us</a>
+                        <a href="{{ route('contact-us') }}">Contact Us</a>
                     </li>
 
 
                     <li>
-                        <a style="background: #4479bd; color: #fff;" href="#!">Donate</a>
+                        <a style="background: #4479bd; color: #fff;" href="javascript:void(0)" data-toggle="modal"
+                            data-target="#rzp">Donate</a>
                     </li>
                     {{-- <li style="background: #4479bd; border-radius: 20px; color: #fff !important;">
                         <a style="color: #fff !important;" href="#!">Donate</a>
@@ -514,6 +541,32 @@
             </nav>
         </div>
     </section>
+
+
+    <div class="modal fade" id="donate-box">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body">
+                    <ul style="list-style-type: none; margin: 0 auto;" class=" mr-4">
+                        <li class="my-3">
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
+                                class="btn btn-block" href="javascript:void(0)">Sponsor A Student</a>
+                        </li>
+                        <li class="my-3">
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
+                                class="btn btn-block" href="javascript:void(0)">Sponsor A Class</a>
+                        </li>
+                        <li class="my-3">
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
+                                class="btn btn-block" href="javascript:void(0)" data-toggle="modal"
+                                data-target="#rzp">Donate Any Amount</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
     @yield('content')
     @include('layouts.foot')
 </body>
