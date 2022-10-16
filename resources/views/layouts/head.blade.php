@@ -9,8 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -23,7 +22,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
-
         body {
             overflow-x: hidden !important;
             margin: 0;
@@ -439,6 +437,7 @@
 
         /* Cards Effect */
 
+
         .myAlert-top {
             position: fixed;
             top: 50px;
@@ -504,21 +503,12 @@
                         <a href="#!">Get Involved</a>
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
-                            <li>
-                                <a href="" data-toggle="modal" data-target="#donate-box">Donate</a>
-                            </li>
-                            <li>
-                                <a href="">Volunteer</a>
-                            </li>
-                            {{-- <li>
-                                <a href="#!">Sponsor A Student</a>
-                            </li>
-                            <li>
-                                <a href="#!">Sponsor A Class</a>
-                            </li>
-                            <li>
-                                <a href="#!">Gift A Student Sponsorship</a>
-                            </li> --}}
+                                <li>
+                                    <a href="" data-toggle="modal" data-target="#donate-box">Donate</a>
+                                </li>
+                                <li>
+                                    <a href="">Volunteer</a>
+                                </li>
                         </ul>
                     </li>
                     <li>
@@ -527,8 +517,8 @@
 
 
                     <li>
-                        <a style="background: #4479bd; color: #fff;" href="javascript:void(0)" data-toggle="modal"
-                            data-target="#rzp">Donate</a>
+                        <a style="background: #4479bd; color: #fff;" href="#!" data-toggle="modal"
+                        data-target="#rzp">Donate</a>
                     </li>
                     {{-- <li style="background: #4479bd; border-radius: 20px; color: #fff !important;">
                         <a style="color: #fff !important;" href="#!">Donate</a>
