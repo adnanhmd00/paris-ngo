@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\SchoolController;
+use App\Http\Controllers\WorkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +35,14 @@ Route::get('register', [RegisterController::class, 'create'])->name('register');
 Route::post('register', [RegisterController::class, 'store'])->name('register');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('about-us/vision', [AboutUsController::class, 'aboutUs'])->name('about-us-vision');
+Route::get('about-us/our-story', [AboutUsController::class, 'ourStory'])->name('about-us-story');
+Route::get('about-us/our-team', [AboutUsController::class, 'ourTeam'])->name('about-us-team');
+Route::get('about-us/our-supporters', [AboutUsController::class, 'ourSupporters'])->name('about-us-supporter');
 Route::get('school/history', [SchoolController::class, 'history'])->name('school-history');
 
-
+Route::get('our-work/monsoon-kids-school', [WorkController::class, 'theSchool'])->name('our-work-school');
+Route::get('our-work/alumni-program', [WorkController::class, 'alumniProgram'])->name('our-work-alumni');
+Route::get('our-work/community-outreach', [WorkController::class, 'communityOutreach'])->name('our-work-community');
 
 
 // Route::get('about-us/vision', [HomeController::class, 'aboutUs'])->name('about-us-vision');

@@ -154,7 +154,8 @@
         }
 
         .navbar-dropdown li a {
-            background: #2581DC;
+            /* background: #2581DC; */
+            background: #fff;
         }
 
         nav ul li a:not(:only-child):after,
@@ -462,7 +463,7 @@
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href="#!"><img src="assets/images/logo.png" style="width: 80px" alt=""></a>
+                <a href="#!"><img src="{{ asset('assets/images/logo.png') }}" style="width: 80px" alt=""></a>
             </div>
             <nav style="z-index: 99">
                 <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
@@ -479,24 +480,45 @@
                                 <a href="{{ route('about-us-vision') }}">Vision</a>
                             </li>
                             <li>
-                                <a href="#!">Board of directors/advisors</a>
+                                <a href="{{ route('about-us-story') }}">Our Story</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('about-us-team') }}">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('about-us-supporter') }}">Our Supporters</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#!">Monsoon Kids School</a>
+                        <a href="#!">Our Work</a>
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
                             <li>
-                                <a href="#!">Values</a>
+                                <a href="{{ route('our-work-school') }}">Monsoon Kids School</a>
                             </li>
                             <li>
-                                <a href="#!">Students</a>
+                                <a href="{{ route('our-work-alumni') }}">Alumni Program</a>
                             </li>
                             <li>
-                                <a href="#!">Teachers/Staffs</a>
+                                <a href="{{ route('our-work-community') }}">Community Outreach</a>
                             </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Our Impact</a>
+                        <ul class="navbar-dropdown">
+                            {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
+                                <li>
+                                    <a href="">Students</a>
+                                </li>
+                                <li>
+                                    <a href="">Alumni</a>
+                                </li>
+                                <li>
+                                    <a href="">Community</a>
+                                </li>
                         </ul>
                     </li>
                     <li>
@@ -504,16 +526,19 @@
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
                                 <li>
-                                    <a href="" data-toggle="modal" data-target="#donate-box">Donate</a>
+                                    <a href="">Donate</a>
                                 </li>
                                 <li>
                                     <a href="">Volunteer</a>
                                 </li>
+                                <li>
+                                    <a href="">Work With Us</a>
+                                </li>
                         </ul>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('contact-us') }}">Contact Us</a>
-                    </li>
+                    </li> --}}
 
 
                     <li>

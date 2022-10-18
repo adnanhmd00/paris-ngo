@@ -63,7 +63,7 @@
                             <i class="fa fa-lightbulb fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                             <div class="hover-div_inner">
                                 {{-- <h3><a href="#">Windows</a></h3> --}}
-                                <p class="text-center">We aim to empower  students to become life-  long learners who strive  for excellence and  actively participate in  and contribute to their  communities</p>
+                                <p class="text-center">Positively impacting  children and communities for over <h2 style="color: #4479bd;"><strong>20 years</strong></h2> </p>
                                 {{-- <div class="hover-div-lower">
                                 </div> --}}
                             </div>
@@ -74,7 +74,7 @@
                             <i class="fa fa-eye fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                             <div class="hover-div_inner">
                                 {{-- <h3><a href="#">Mac</a></h3> --}}
-                                <p class="text-center">We aim to empower students to become life- long learners who strive for excellence and actively participate in and contribute to their communities.</p>
+                                <p class="text-center">We aim to empower  students to become life-  long learners who strive  for excellence and  actively participate in  and contribute to their communities.</p>
                                 {{-- <div class="hover-div-lower">
                                     <div class="col-xs-6 text-left"><span class="lower-text">Latest</span>High Sierra</div>
                                     <div class="col-xs-6 text-right"><span class="lower-text">Old</span>OS X 10.0</div>
@@ -87,7 +87,7 @@
                             <i class="fa fa-flag fa-light fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                             <div class="hover-div_inner">
                                 {{-- <h3><a href="#">Mac</a></h3> --}}
-                                <p class="text-center">We aim to empower students to become life- long learners who strive for excellence and actively participate in and contribute to their communities.</p>
+                                <p class="text-center"><strong style="font-size: 32px; color: #4479bd;">165</strong> Students,<br> <strong style="font-size: 32px; color: #4479bd;">12</strong> teachers, <br><strong style="font-size: 32px; color: #4479bd;">5</strong> support staff</p>
                                 {{-- <div class="hover-div-lower">
                                     <div class="col-xs-6 text-left"><span class="lower-text">Latest</span>High Sierra</div>
                                     <div class="col-xs-6 text-right"><span class="lower-text">Old</span>OS X 10.0</div>
@@ -150,26 +150,22 @@
         </div>
     </header>
 
-    <section id="notes" class="text-center">
+    {{-- <section id="notes" class="text-center">
         <div class="wrapper clearfix">
             <aside class="note-wrap note-yellow">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
-                {{-- <a href="http://youtu.be/vFYaFT0q6Uw">The Mighty Boosh</a> --}}
             </aside>
             <aside class="note-wrap note-blue">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
-                {{-- <a href="http://youtu.be/cPJUBQd-PNM">CaptainSparklez</a> --}}
             </aside>
             <aside class="note-wrap note-pink">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
-                {{-- <a href="http://youtu.be/EF1V8HFfpTE">apetor</a> --}}
             </aside>
             <aside class="note-wrap note-green">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et!</p>
-                {{-- <a href="http://youtu.be/i2LhAeFutxk">Jefferson Airplane</a> --}}
             </aside>
         </div>
-    </section>
+    </section> --}}
 
     {{-- <section class="container-fluid" id="mission-vision">
         <div class="container mt-5">

@@ -29,6 +29,18 @@ class AboutUsController extends Controller
     public function aboutUs(){
         return view('about-us');
     }
+
+    public function ourStory(){
+        return view('our-story');
+    }
+
+    public function ourTeam(){
+        return view('our-team');
+    }
+
+    public function ourSupporter(){
+        return view('our-team');
+    }
 }
      
      
