@@ -8,6 +8,7 @@ use App\Http\Controllers\DonationController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\WorkController;
+use App\Http\Controllers\ImpactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,13 @@ Route::get('school/history', [SchoolController::class, 'history'])->name('school
 Route::get('our-work/monsoon-kids-school', [WorkController::class, 'theSchool'])->name('our-work-school');
 Route::get('our-work/alumni-program', [WorkController::class, 'alumniProgram'])->name('our-work-alumni');
 Route::get('our-work/community-outreach', [WorkController::class, 'communityOutreach'])->name('our-work-community');
+
+Route::get('our-impact/students', [ImpactController::class, 'students'])->name('our-impact-students');
+Route::get('our-work/alumni', [ImpactController::class, 'alumni'])->name('our-impact-alumni');
+Route::get('our-impact/community', [ImpactController::class, 'community'])->name('our-impact-community');
+
+Route::get('gallery', [AboutUsController::class, 'gallery'])->name('gallery');
+
 
 
 // Route::get('about-us/vision', [HomeController::class, 'aboutUs'])->name('about-us-vision');

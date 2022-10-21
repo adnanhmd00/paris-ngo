@@ -123,6 +123,35 @@
 </div>
 
 
+<div class="modal fade" id="sas">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                {{-- <iframe id="videoContainer" width="800" height="685"
+                   src="https://pages.razorpay.com/pl_KPHF6fNpLP5CYh/view" frameborder="0"
+                   allowfullscreen></iframe> --}}
+                <div class="text-center">
+                    <img src="{{ asset('assets/images/logo.png') }}" style="width: 100px;" class="mb-2"
+                        alt="">
+                </div>
+                {{-- <form action="/pay/coffee"> --}}
+                <input type="hidden" name="key" id="key" value="{{ env('RAZORPAY_KEY') }}">
+                <input type="hidden" name="key" id="token" value="{{ csrf_token() }}">
+                <input type="text" id="spname" name="name" value="" placeholder="&nbsp;Name" class="form-control p-1 m-2" style="border-radius: 10px;" required>
+                <input type="text" id="spemail" name="email" value="" placeholder="&nbsp;Email" class="form-control p-1 m-2" style="border-radius: 10px;" required>
+                <input type="text" id="spphone" name="phone" value="" placeholder="&nbsp;Mobile No." class="form-control p-1 m-2" style="border-radius: 10px;" required>
+                <input type="text" id="spamount" name="amount" value="10000" readonly placeholder="&nbsp;Amount" class=" form-control p-1 m-2" style="border-radius: 10px;" required>
+                <div class="text-center mt-2">
+                    <button id="sponsor_student" class="btn btn-success px-5" style="background: #4479bd; padding: 10px 20px; border-radius: 20px;">Sponsor A Student</button>
+                </div>
+                {{-- </form> --}}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 <div class="myAlert-top alert alert-success">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Success!</strong> Thank You For Your Donation! A confirmation mail has been sent on your email address.
@@ -135,6 +164,7 @@
 <script src="assets/js/carousel.js"></script>
 <script src="{{ asset('https://checkout.razorpay.com/v1/checkout.js') }}"></script>
 <script src="{{ asset('assets/js/razorpay.js') }}"></script>
+<script src="{{ asset('assets/js/razorpay-sponsor.js') }}"></script>
 
 <script>
     (function($) {

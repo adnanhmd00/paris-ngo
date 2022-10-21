@@ -1,3 +1,4 @@
+{{-- Can be created with excel for the bar graph --}}
 @extends('layouts.head')
 @section('content')
     <div class="container mt-5">

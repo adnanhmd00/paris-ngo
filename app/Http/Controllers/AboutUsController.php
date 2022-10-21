@@ -41,6 +41,10 @@ class AboutUsController extends Controller
     public function ourSupporter(){
         return view('our-team');
     }
+
+    public function gallery(){
+        return view('gallery2');
+    }
 }
      
      

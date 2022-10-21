@@ -7,9 +7,7 @@
         <div class="card rounded p-4">
             <div class="row container-fluid">
                 <div class="col-md-12">
-                    We provide financial support to the school's alumni as they transition into balwant Rai School or other
-                    Government schools. We also provide them with academic support through remedial classes which are
-                    conducyted in the Monsoon Kids School premises.
+                   {{-- pls put lots of photo of various activities. There are photos of the children watching a movie, and dancing etc. the photos are on the facebook page of Romil Sew Sanstha. There are photos of a dental camp too. pls use those --}}
                 </div>
 
             </div>

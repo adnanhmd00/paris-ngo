@@ -23,6 +23,7 @@
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
         body {
+            font-size: 16px;
             overflow-x: hidden !important;
             margin: 0;
             padding: 0;
@@ -439,7 +440,7 @@
         /* Cards Effect */
 
 
-        .myAlert-top {
+        /* .myAlert-top {
             position: fixed;
             top: 50px;
             right: 2%;
@@ -455,7 +456,7 @@
                 z-index: 9999;
                 width: 96%;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -463,7 +464,7 @@
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href="#!"><img src="{{ asset('assets/images/logo.png') }}" style="width: 80px" alt=""></a>
+                <a href="/"><img src="{{ asset('assets/images/logo.png') }}" style="width: 80px" alt=""></a>
             </div>
             <nav style="z-index: 99">
                 <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
@@ -488,6 +489,9 @@
                             <li>
                                 <a href="{{ route('about-us-supporter') }}">Our Supporters</a>
                             </li>
+                            <li>
+                                <a href="{{ route('gallery') }}">Gallery</a>
+                            </li>
                         </ul>
                     </li>
 
@@ -511,13 +515,13 @@
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
                                 <li>
-                                    <a href="">Students</a>
+                                    <a href="{{ route('our-impact-students') }}">Students</a>
                                 </li>
                                 <li>
-                                    <a href="">Alumni</a>
+                                    <a href="{{ route('our-impact-alumni') }}">Alumni</a>
                                 </li>
                                 <li>
-                                    <a href="">Community</a>
+                                    <a href="{{ route('our-impact-community') }}">Community</a>
                                 </li>
                         </ul>
                     </li>
@@ -526,7 +530,8 @@
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
                                 <li>
-                                    <a href="">Donate</a>
+                                    <a href="" data-toggle="modal"
+                                    data-target="#donate-box">Donate</a>
                                 </li>
                                 <li>
                                     <a href="">Volunteer</a>
@@ -541,17 +546,17 @@
                     </li> --}}
 
 
-                    <li>
+                    {{-- <li>
                         <a style="background: #4479bd; color: #fff;" href="#!" data-toggle="modal"
                         data-target="#rzp">Donate</a>
-                    </li>
-                    {{-- <li style="background: #4479bd; border-radius: 20px; color: #fff !important;">
-                        <a style="color: #fff !important;" href="#!">Donate</a>
                     </li> --}}
+                    
+                    <li>
+                        <a style="background: #4479bd; color: #fff;" href="#!" data-toggle="modal"
+                        data-target="#donate-page-box">Donate</a>
+                    </li>
+                    
 
-                    {{-- <button class="btn btn-primary">
-                        Donate
-                    </button> --}}
                 </ul>
             </nav>
         </div>
@@ -565,7 +570,8 @@
                     <ul style="list-style-type: none; margin: 0 auto;" class=" mr-4">
                         <li class="my-3">
                             <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
-                                class="btn btn-block" href="javascript:void(0)">Sponsor A Student</a>
+                                class="btn btn-block" href="javascript:void(0)" data-toggle="modal"
+                                data-target="#sas">Sponsor A Student</a>
                         </li>
                         <li class="my-3">
                             <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
@@ -577,6 +583,17 @@
                                 data-target="#rzp">Donate Any Amount</a>
                         </li>
                     </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="donate-page-box">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body">
+                    <embed src="https://rzp.io/l/indiandonations" type="text/html" width="100%" height="500px">
                 </div>
 
             </div>
