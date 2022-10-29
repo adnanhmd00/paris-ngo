@@ -21,14 +21,14 @@
     <title>Romil Seva Sanstha</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
-        @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap'); */
         body {
-            font-size: 16px;
+            font-size: 20px;
             overflow-x: hidden !important;
             margin: 0;
             padding: 0;
             /* font-family: 'Roboto', sans-serif; */
-            font-family: 'Fuzzy Bubbles', cursive;
+            font-family: 'Fuzzy Bubbles', 'Open Sans' cursive;
 
         }
 
@@ -437,6 +437,31 @@
             border-radius: 5px;
         }
 
+        .hover-div-sm {
+            padding: 20px 20px;
+            text-align: center;
+            min-height: 150px;
+            border-radius: 20px;
+        }
+
+        .hover-div-sm {
+            border-top: 1px solid #f8f8f8;
+            background: #f8f8f8;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            margin: 10px 0px;
+        }
+
+        .hover-div-sm:hover {
+            -webkit-transform: translateY(-20px);
+            -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
+            box-shadow: 0 22px 43px rgba(0, 0, 0, 0.32);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         /* Cards Effect */
 
 
@@ -467,14 +492,14 @@
                 <a href="/"><img src="{{ asset('assets/images/logo.png') }}" style="width: 80px" alt=""></a>
             </div>
             <nav style="z-index: 99">
-                <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+                <div class="nav-mobile"><a id="navbar-toggle" href="javascript:void(0)"><span></span></a></div>
                 <ul class="nav-list mt-1">
                     {{-- <li>
                         <a href="#!">Home</a>
                     </li> --}}
 
                     <li>
-                        <a href="#!">About Us</a>
+                        <a href="#">About Us</a>
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
                             <li>
@@ -496,7 +521,7 @@
                     </li>
 
                     <li>
-                        <a href="#!">Our Work</a>
+                        <a href="#">Our Work</a>
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 230px; border-radius: 20px;"> --}}
                             <li>
@@ -511,7 +536,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#!">Our Impact</a>
+                        <a href="#">Our Impact</a>
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
                                 <li>
@@ -526,7 +551,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#!">Get Involved</a>
+                        <a href="#">Get Involved</a>
                         <ul class="navbar-dropdown">
                             {{-- <ul class="navbar-dropdown" style="width: 220px;border-radius: 20px;"> --}}
                                 <li>
@@ -547,12 +572,12 @@
 
 
                     {{-- <li>
-                        <a style="background: #4479bd; color: #fff;" href="#!" data-toggle="modal"
+                        <a style="background: #4479bd; color: #fff;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
                         data-target="#rzp">Donate</a>
                     </li> --}}
                     
                     <li>
-                        <a style="background: #4479bd; color: #fff;" href="#!" data-toggle="modal"
+                        <a style="background: #4479bd; color: #fff;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
                         data-target="#donate-page-box">Donate</a>
                     </li>
                     
@@ -569,18 +594,24 @@
                 <div class="modal-body">
                     <ul style="list-style-type: none; margin: 0 auto;" class=" mr-4">
                         <li class="my-3">
-                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
-                                class="btn btn-block" href="javascript:void(0)" data-toggle="modal"
-                                data-target="#sas">Sponsor A Student</a>
+                            <!--<a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"-->
+                            <!--    class="btn btn-block" href="javascript:void(0)" data-toggle="modal"-->
+                            <!--    data-target="#sas">Sponsor A Student</a>-->
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
+                        data-target="#donate-page-box">Sponsor A Student</a>
                         </li>
                         <li class="my-3">
-                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
-                                class="btn btn-block" href="javascript:void(0)">Sponsor A Class</a>
+                            <!--<a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"-->
+                            <!--    class="btn btn-block" href="javascript:void(0)">Sponsor A Class</a>-->
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
+                        data-target="#donate-page-box">Sponsor A Class</a>
                         </li>
                         <li class="my-3">
-                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"
-                                class="btn btn-block" href="javascript:void(0)" data-toggle="modal"
-                                data-target="#rzp">Donate Any Amount</a>
+                            <!--<a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"-->
+                            <!--    class="btn btn-block" href="javascript:void(0)" data-toggle="modal"-->
+                            <!--    data-target="#rzp">Donate Any Amount</a>-->
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
+                        data-target="#donate-page-box">Donate Any Amount</a>
                         </li>
                     </ul>
                 </div>

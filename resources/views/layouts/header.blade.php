@@ -29,12 +29,12 @@
                         <ul class="ulleft">
                             <li>
                                 <i class="far fa-envelope"></i>
-                                sales@smarteyeapps.com
+                                urvashi.sethisodhi@gmail.com
                                 <span>|</span>
                             </li>
                             <li>
                                 <i class="fas fa-phone-volume"></i>
-                                +876 987 666 5433
+                                +91 9930203871
                             </li>
                         </ul>
                     </div>

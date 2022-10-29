@@ -10,7 +10,8 @@
                 <img src="{{ asset('assets/images/about-us.jpg') }}" class="img-fluid rounded" style="width: 100%" alt="">
             </div>
             <div class="col-md-6" id="vision">
-                <p>We aim to empower  students to become life-  long learners who strive  for excellence and  actively participate in  and contribute to their  communities.</p>
+                <p>We aim to empower  students to become life-  long learners who strive  for excellence and  actively participate in  and contribute to their  communities.
+</p>
             </div>
         </div>
     </div>

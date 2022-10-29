@@ -85,7 +85,10 @@
                     </div>
                     
                     <div class="mt-3">
-                        <a style="background: #fff; padding: 10px 20px; border-radius: 20px;" class="btn btn-block" href="javascript:void(0)" data-toggle="modal" data-target="#rzp">Donate</a>
+                        <!--<a style="background: #fff; padding: 10px 20px; border-radius: 20px;" class="btn btn-block" href="javascript:void(0)" data-toggle="modal" data-target="#rzp">Donate</a>-->
+                        
+                        <a style="background: #fff; padding: 10px 20px; border-radius: 20px;" class="btn btn-block" href="https://rzp.io/l/indiandonations" data-toggle="modal"
+                        data-target="#donate-page-box">Donate</a>
                     </div>
                 </div>
             </div>
@@ -148,14 +151,14 @@
             </div>
 
         </div>
-    </div>
+    </div>a
 </div>
 
 
-<div class="myAlert-top alert alert-success">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Success!</strong> Thank You For Your Donation! A confirmation mail has been sent on your email address.
-</div>
+<!--<div class="myAlert-top alert alert-success">-->
+<!--    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+<!--    <strong>Success!</strong> Thank You For Your Donation! A confirmation mail has been sent on your email address.-->
+<!--</div>-->
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

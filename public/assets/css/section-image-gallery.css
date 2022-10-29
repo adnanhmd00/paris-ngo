@@ -48,11 +48,11 @@ body {
   .panel3 { background-image:url(https://docs.google.com/uc?export=download&id=1ZZYNm8gwikJUcdLXd35R2lwFxn665gs6); }
   .panel4 { background-image:url(https://docs.google.com/uc?export=download&id=1ZrKJlq0U7zg4rOkiw7cYOUVsZKFV9UnB); }
   .panel5 { background-image:url(https://docs.google.com/uc?export=download&id=19EnMY5Dd5Kx-BK2uuoRUrZImt8fOcCq4); } */
-  .panel1{ background-image:url(/assets/images/panel/child-image-3.jpg);}
-  .panel2{ background-image:url(/assets/images/panel/child-image-2.jpg);}
-  .panel3{ background-image:url(/assets/images/panel/child-img-1.webp);}
-  .panel4{ background-image:url(/assets/images/panel/child-img-4.jpg);}
-  .panel5{ background-image:url(/assets/images/panel/child-img-5.jpg);}
+  .panel1{ background-image:url(/assets/images/panel/panel-1.jpeg);}
+  .panel2{ background-image:url(/assets/images/panel/panel-5.jpeg);}
+  .panel3{ background-image:url(/assets/images/panel/panel-3.jpeg);}
+  .panel4{ background-image:url(/assets/images/panel/panel-4.jpeg);}
+  .panel5{ background-image:url(/assets/images/panel/panel-2.jpg);}
 
   /* Flex Children */
   .panel > * {

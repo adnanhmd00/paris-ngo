@@ -5,7 +5,7 @@
             <div class="row">
                 <h2>School</h2>
                 <ul>
-                    <li> The School</li>
+                    <li> Our Principles</li>
                 </ul>
             </div>
         </div>
@@ -16,23 +16,16 @@
 
             <div class="row natur-row no-margin w-100">
                 <div class="text-part col-md-6">
-                    <h2>About Our Charity</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus
-                        ligula non congue. Suspendisse at pretium massa, sit amet
-                        vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl </p>
-                    <p> Cras faucibus laoreet nibh, sit amet tincidunt leo mollis in. Etiam eu mauris metus.
-                        Nulla facilisi. Etiam vestibulum,
-                        nisi et convallis elementum, leo orci aliquam metus, id posuere massa neque vitae
-                        arcu.</p>
-
-                    <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum sapien,
-                        eget tempor justo. Aenean porttitor nibh metus, sollicitudin egestas metus posuere et
-                        . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit
-                        amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at
-                        dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in,
-                        dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida
-                        vestibulum, urna justo posuere ante,
-                        id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus </p>
+                    <h2>Our Principles</h2>
+                    
+                    <p>We strive to </p>
+                    <p>Create a safe, joyful and inclusive environment that is conducive to learning</p>
+                    <p>Encourage holistic development that includes  the intellectual, physical, social, creative and  emotional growth of every child </p>
+                    <p>Foster a sense of intellectual curiosity and  reflection </p>
+                    <p>Inculcate empathy, compassion and respect  for each other and their environment </p>
+                    <p>Engage all stakeholders in the child’s  education, including teachers, alumni, parents,  and theircommunities </p>
+                    <p>Ensure learning is contextual, relevant and  linked to the lives and environment of children </p>
+            
                 </div>
                 <div class="image-part col-md-6">
                     <div class="about-quick-box row">
