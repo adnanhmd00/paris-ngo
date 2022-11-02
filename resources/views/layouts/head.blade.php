@@ -514,9 +514,9 @@
                             <li>
                                 <a href="{{ route('about-us-supporter') }}">Our Supporters</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('gallery') }}">Gallery</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
 
