@@ -4,8 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\AboutUsController;
+// use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\CoverImageController;
+use App\Http\Controllers\BoxTextController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +40,11 @@ Route::prefix('admin')->group(function () {
     Route::post('add-slider', [SliderController::class, 'store'])->name('admin.add-slider');
     Route::get('edit-slider/{id}', [SliderController::class, 'edit'])->name('admin.edit-slider');
     Route::post('update-slider/{id}', [SliderController::class, 'update'])->name('admin.update-slider');
+    Route::get('cover-images', [CoverImageController::class, 'index'])->name('admin.cover-images');
+    Route::get('add-cover-image', [CoverImageController::class, 'create'])->name('admin.add-cover-image');
+    Route::post('add-cover-image', [CoverImageController::class, 'store'])->name('admin.add-cover-image');
+    Route::get('edit-cover-image/{id}', [CoverImageController::class, 'edit'])->name('admin.edit-cover-image');
+    Route::post('update-cover-image/{id}', [CoverImageController::class, 'update'])->name('admin.update-cover-image');
 
     // ------------------------------------------------------------------------------------------
 
@@ -51,8 +59,25 @@ Route::prefix('admin')->group(function () {
     // ------------------------------------------------------------------------------------------
 
     // ---------------------------------------- ABOUT ----------------------------------------
-    Route::get('about-us', [AboutUsController::class, 'index'])->name('admin.about-us');
-    Route::post('about-us', [AboutUsController::class, 'update'])->name('admin.about-us');
+    // Route::get('about-us', [AboutUsController::class, 'index'])->name('admin.about-us');
+    // Route::post('about-us', [AboutUsController::class, 'update'])->name('admin.about-us');
+    // ------------------------------------------------------------------------------------------
+    
+    // ---------------------------------------- BOX TEXT ----------------------------------------
+    Route::get('box-texts', [BoxTextController::class, 'index'])->name('admin.box-texts');
+    Route::get('add-text', [BoxTextController::class, 'create'])->name('admin.add-text');
+    Route::post('save-text', [BoxTextController::class, 'store'])->name('admin.save-text');
+    Route::get('edit-text/{id}', [BoxTextController::class, 'edit'])->name('admin.edit-text');
+    Route::post('update-text/{id}', [BoxTextController::class, 'update'])->name('admin.update-text');
+    // ------------------------------------------------------------------------------------------
+
+
+    // ---------------------------------------- ABOUT US ----------------------------------------
+    Route::get('about-us/vision', [AboutUsController::class, 'vision'])->name('admin.about-us.vision');
+    Route::get('about-us/story', [AboutUsController::class, 'ourStory'])->name('admin.about-us.story');
+    Route::get('about-us/team', [AboutUsController::class, 'ourTeam'])->name('admin.about-us.team');
+    Route::get('about-us/supporters', [AboutUsController::class, 'supporters'])->name('admin.about-us.supporters');
+    Route::get('about-us/gallery', [AboutUsController::class, 'gallery'])->name('admin.about-us.gallery');
     // ------------------------------------------------------------------------------------------
     
 

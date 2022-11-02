@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="d-sm-block d-lg-none">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="starter-template">
                     <div class="row">
                         <div class="col-sm-4">

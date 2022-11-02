@@ -35,18 +35,85 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#manage-website"
                 aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Manage Website</span>
             </a>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="manage-website" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Logo</a>
+                        <a class="collapse-item" href="{{ route('admin.cover-images') }}">Cover Images</a>
+                        <a class="collapse-item" href="{{ route('admin.box-texts') }}">Box Text</a>
                         <a class="collapse-item" href="{{ route('admin.slider-settings') }}">Sliders </a>
                         <a class="collapse-item" href="{{ route('admin.gallery') }}">Gallery </a>
-                        <a class="collapse-item" href="{{ route('admin.about-us') }}">About Us</a>
+                        {{-- <a class="collapse-item" href="{{ route('admin.about-us') }}">About Us</a> --}}
                         {{-- <a class="collapse-item" href="cards.html">Contact Us</a> --}}
+                    </div>
+                </div>
+            </li>
+
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#about-us"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>About Us</span>
+            </a>
+                <div id="about-us" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('admin.about-us.vision') }}">Vision</a>
+                        <a class="collapse-item" href="{{ route('admin.about-us.story') }}">Our Story</a>
+                        <a class="collapse-item" href="{{ route('admin.about-us.team') }}">Our Team</a>
+                        <a class="collapse-item" href="{{ route('admin.about-us.supporters') }}">Our Supporters</a>
+                        <a class="collapse-item" href="{{ route('admin.about-us.gallery') }}">Gallery</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#our-work"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Our Work</span>
+            </a>
+                <div id="our-work" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Monsoon Kids School</a>
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Alumni Program</a>
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Community Outreach</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#our-impact"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Our Impact</span>
+            </a>
+                <div id="our-impact" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Students</a>
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Alumni</a>
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Community</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#get-involved"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Get Involved</span>
+            </a>
+                <div id="get-involved" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Donate</a>
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Volunteer</a>
+                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Work With Us</a>
                     </div>
                 </div>
             </li>
