@@ -8,11 +8,16 @@
         </div>
     </div>
     <div class="card p-3 m-3">
-        <form action="{{ route('admin.save-text') }}" method="POST" enctype="multipart/form-data">
+        @if($story->count() > 0)
+
+        <form action="{{ route('admin.about-us.update-story') }}" method="POST" enctype="multipart/form-data">
+        @else
+        <form action="{{ route('admin.about-us.add-story') }}" method="POST" enctype="multipart/form-data">
+        @endif
             @csrf
             <div class="form-group">
                 <div class="col-md-12">
-                    <textarea name="text" id="editor" col="10"></textarea>
+                    <textarea name="story" id="editor" col="10">{{ $story->story }}</textarea>
                 </div>
                 <div class="text-center mt-3">
                     <button class="btn btn-primary btn-sm">Submit</button>

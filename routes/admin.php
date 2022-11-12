@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\CoverImageController;
 use App\Http\Controllers\BoxTextController;
+use App\Http\Controllers\Admin\OurWorkController;
+use App\Http\Controllers\Admin\OurImpactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,10 +76,61 @@ Route::prefix('admin')->group(function () {
 
     // ---------------------------------------- ABOUT US ----------------------------------------
     Route::get('about-us/vision', [AboutUsController::class, 'vision'])->name('admin.about-us.vision');
+    Route::post('about-us/add-vision', [AboutUsController::class, 'postVision'])->name('admin.about-us.add-vision');
+    Route::post('about-us/update-vision', [AboutUsController::class, 'updateVision'])->name('admin.about-us.update-vision');
     Route::get('about-us/story', [AboutUsController::class, 'ourStory'])->name('admin.about-us.story');
+    Route::post('about-us/add-story', [AboutUsController::class, 'postStory'])->name('admin.about-us.add-story');
+    Route::post('about-us/update-story', [AboutUsController::class, 'updateStory'])->name('admin.about-us.update-story');
     Route::get('about-us/team', [AboutUsController::class, 'ourTeam'])->name('admin.about-us.team');
-    Route::get('about-us/supporters', [AboutUsController::class, 'supporters'])->name('admin.about-us.supporters');
+    
+    Route::post('about-us/add-team-director', [AboutUsController::class, 'addTeamDirector'])->name('admin.add-team-director');
+    Route::post('about-us/update-team-director/{id}', [AboutUsController::class, 'updateTeamDirector'])->name('admin.update-team-director');
+    
+    Route::post('about-us/add-team-teacher', [AboutUsController::class, 'addTeamTeacher'])->name('admin.add-team-teacher');
+    Route::post('about-us/update-team-teacher/{id}', [AboutUsController::class, 'updateTeamTeacher'])->name('admin.update-team-teacher');
+    
+    Route::post('about-us/add-team-stiching', [AboutUsController::class, 'addTeamStiching'])->name('admin.add-team-stiching');
+    Route::post('about-us/update-team-stiching/{id}', [AboutUsController::class, 'updateTeamStiching'])->name('admin.update-team-stiching');
+    
+    Route::post('about-us/add-team-helpers', [AboutUsController::class, 'addTeamHelper'])->name('admin.add-team-helper');
+    Route::post('about-us/update-team-helpers/{id}', [AboutUsController::class, 'updateTeamHelper'])->name('admin.update-team-helper');
+    
+    Route::post('about-us/add-team-gardener', [AboutUsController::class, 'addTeamGardener'])->name('admin.add-team-gardener');
+    Route::post('about-us/update-team-gardener/{id}', [AboutUsController::class, 'updateTeamGardener'])->name('admin.update-team-gardener');
+    
+    Route::get('about-us/supporters', [AboutUsController::class, 'ourSupporters'])->name('admin.about-us.supporters');
+
     Route::get('about-us/gallery', [AboutUsController::class, 'gallery'])->name('admin.about-us.gallery');
+    Route::post('about-us/add-gallery-image', [AboutUsController::class, 'postGallery'])->name('admin.add-gallery-image');
+    Route::get('about-us/update-gallery/{id}', [AboutUsController::class, 'updateGallery'])->name('admin.update-gallery');
+    Route::get('about-us/delete-gallery/{id}', [AboutUsController::class, 'deleteGallery'])->name('admin.delete-gallery');
+
+    // ------------------------------------------------------------------------------------------
+
+
+    // ---------------------------------------- OUR WORK ----------------------------------------
+    Route::get('our-work/school', [OurWorkController::class, 'school'])->name('admin.our-work.school');
+    Route::get('our-work/alumni', [OurWorkController::class, 'alumniProgram'])->name('admin.our-work.alumni');
+    Route::post('our-work-add-alumni', [OurWorkController::class, 'postAlumniProgram'])->name('admin.work-add-alumni');
+    Route::post('our-work-update-alumni', [OurWorkController::class, 'updateAlumniProgram'])->name('admin.work-update-alumni');
+    Route::get('our-work/community', [OurWorkController::class, 'communityOutreach'])->name('admin.our-work.community');
+    Route::post('our-work-add-community', [OurWorkController::class, 'postCommunityOutreach'])->name('admin.work-add-community');
+    Route::post('our-work-update-community', [OurWorkController::class, 'updateCommunityOutreach'])->name('admin.work-update-community');
+    // ------------------------------------------------------------------------------------------
+
+    // ---------------------------------------- OUR IMPACT   ----------------------------------------
+    Route::get('our-impact/students', [OurImpactController::class, 'students'])->name('admin.our-impact.students');
+    Route::get('our-impact/add-students', [OurImpactController::class, 'addStudent'])->name('admin.add-impact.students');
+    Route::post('our-impact/save-students', [OurImpactController::class, 'postStudent'])->name('admin.save-impact.students');
+    Route::get('our-impact/edit-students/{id}', [OurImpactController::class, 'editStudent'])->name('admin.edit-impact.students');
+    Route::post('our-impact/update-students/{id}', [OurImpactController::class, 'updateStudent'])->name('admin.update-impact.students');
+    Route::get('our-impact/delete-students/{id}', [OurImpactController::class, 'deleteStudent'])->name('admin.delete-impact.student');
+    Route::get('our-impact/alumni', [OurImpactController::class, 'alumni'])->name('admin.our-impact.alumni');
+    Route::post('our-impact/add-alumni', [OurImpactController::class, 'postAlumni'])->name('admin.add-impact.alumni');
+    Route::post('our-impact/update-alumni', [OurImpactController::class, 'updateAlumni'])->name('admin.update-impact.alumni');
+    Route::get('our-impact/community', [OurImpactController::class, 'community'])->name('admin.our-impact.community');
+    Route::post('our-impact/add-community', [OurImpactController::class, 'postCommunity'])->name('admin.add-impact.community');
+    Route::post('our-impact/update-community', [OurImpactController::class, 'updateCommunity'])->name('admin.update-impact.community');
     // ------------------------------------------------------------------------------------------
     
 

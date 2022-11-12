@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
 use Illuminate\Http\Request;
+use App\Models\Vision;
+use App\Models\Story;
+use App\Models\Team;
 
 class AboutUsController extends Controller
 {
@@ -26,16 +29,23 @@ class AboutUsController extends Controller
         }
     }
 
-    public function aboutUs(){
-        return view('about-us');
+    public function vision(){
+        $vision = Vision::first();
+        return view('about-us-vision', compact('vision'));
     }
 
     public function ourStory(){
-        return view('our-story');
+        $story = Story::first();
+        return view('our-story', compact('story'));
     }
 
     public function ourTeam(){
-        return view('our-team');
+        $directors = Team::where('type', 'director')->get();
+        $teachers = Team::where('type', 'teacher')->get();
+        $stiching = Team::where('type', 'stiching')->get();
+        $helpers = Team::where('type', 'helper')->get();
+        $gardeners = Team::where('type', 'gardener')->get();
+        return view('our-team', compact('directors', 'teachers', 'stiching', 'helpers', 'gardeners'));
     }
 
     public function ourSupporter(){

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Work;
 
 class WorkController extends Controller
 {
@@ -11,10 +12,12 @@ class WorkController extends Controller
     }
 
     public function alumniProgram(){
-        return view('alumni-program');
+        $alumni = Work::where('type', 'alumni')->first();
+        return view('alumni-program', compact('alumni'));
     }
 
     public function communityOutreach(){
-        return view('community-outreach');
+        $community = Work::where('type', 'community')->first();
+        return view('community-outreach', compact('community'));
     }
 }

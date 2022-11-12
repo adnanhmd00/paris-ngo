@@ -43,7 +43,7 @@ class CoverImageController extends Controller
 
     public function edit($id){
         $image = CoverImage::findOrFail($id);
-        return view('admin.cover-image.edit', compact('image'));
+        return view('admin.cover-images.edit', compact('image'));
     }
 
     public function update(Request $request, $id){
@@ -58,7 +58,7 @@ class CoverImageController extends Controller
             }else{
                 $image->image = $request->prev_image;
             }
-            if($slider->save()){
+            if($image->save()){
                 return back()->with('success', 'Your Cover Image Has Been Updated Successfully');
             }
         }

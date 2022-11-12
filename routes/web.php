@@ -35,7 +35,7 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('register', [RegisterController::class, 'create'])->name('register');
 Route::post('register', [RegisterController::class, 'store'])->name('register');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('about-us/vision', [AboutUsController::class, 'aboutUs'])->name('about-us-vision');
+Route::get('about-us/vision', [AboutUsController::class, 'vision'])->name('about-us-vision');
 Route::get('about-us/our-story', [AboutUsController::class, 'ourStory'])->name('about-us-story');
 Route::get('about-us/our-team', [AboutUsController::class, 'ourTeam'])->name('about-us-team');
 Route::get('about-us/our-supporters', [AboutUsController::class, 'ourSupporters'])->name('about-us-supporter');

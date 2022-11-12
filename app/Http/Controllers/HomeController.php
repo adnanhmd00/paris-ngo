@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Slider;
 use App\Models\AboutUs;
 use App\Models\Gallery;
+use App\Models\CoverImage;
+use App\Models\BoxText;
 
 class HomeController extends Controller
 {
@@ -29,8 +31,11 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         $sliders = Slider::where('status', '1')->get();
+        $cover_image = CoverImage::where('status', '1')->take(5)->get();
+        $box_text = BoxText::take(3)->get();
+
         $about = AboutUs::first();
-        return view('welcome', compact('user', 'sliders', 'about'));
+        return view('welcome', compact('user', 'sliders', 'about', 'cover_image', 'box_text'));
     }
 
     public function gallery(){

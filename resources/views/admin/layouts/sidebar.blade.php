@@ -81,9 +81,9 @@
             </a>
                 <div id="our-work" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Monsoon Kids School</a>
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Alumni Program</a>
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Community Outreach</a>
+                        <a class="collapse-item" href="{{ route('admin.our-work.school') }}">Monsoon Kids School</a>
+                        <a class="collapse-item" href="{{ route('admin.our-work.alumni') }}">Alumni Program</a>
+                        <a class="collapse-item" href="{{ route('admin.our-work.community') }}">Community Outreach</a>
                     </div>
                 </div>
             </li>
@@ -96,9 +96,9 @@
             </a>
                 <div id="our-impact" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Students</a>
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Alumni</a>
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Community</a>
+                        <a class="collapse-item" href="{{ route('admin.our-impact.students') }}">Students</a>
+                        <a class="collapse-item" href="{{ route('admin.our-impact.alumni') }}">Alumni</a>
+                        <a class="collapse-item" href="{{ route('admin.our-impact.community') }}">Community</a>
                     </div>
                 </div>
             </li>

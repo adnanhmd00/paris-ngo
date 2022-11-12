@@ -8,16 +8,20 @@
         </div>
     </div>
     <div class="card p-3 m-3">
-        <form action="{{ route('admin.save-text') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group">
-                <div class="col-md-12">
-                    <textarea name="text" id="editor" col="10"></textarea>
-                </div>
-                <div class="text-center mt-3">
-                    <button class="btn btn-primary btn-sm">Submit</button>
-                </div>
+        @if ($community != '')
+            <form action="{{ route('admin.work-update-community') }}" method="POST" enctype="multipart/form-data">
+        @else
+            <form action="{{ route('admin.work-add-community') }}" method="POST" enctype="multipart/form-data">
+        @endif
+        @csrf
+        <div class="form-group">
+            <div class="col-md-12">
+                <textarea name="text" id="editor" col="10">@if($community != ''){{ $community->text }} @endif</textarea>
             </div>
+            <div class="text-center mt-3">
+                <button class="btn btn-primary btn-sm">Submit</button>
+            </div>
+        </div>
         </form>
     </div>
 @endsection

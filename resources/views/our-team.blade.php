@@ -13,38 +13,12 @@
                     <div class="">
                         <div class="table-responsive">
                             <table class="table table-bordered">
-                                <tr>
-                                    <td>Air Marshal Sethi</td>
-                                    <td><b>President</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Vinod Dhawan</td>
-                                    <td><b>Vice President</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Ravinder Ahuja</td>
-                                    <td><b>Treasurer</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Bela Bhasin</td>
-                                    <td><b>Hons Secretary</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Neena Dhawan</td>
-                                    <td><b>Hons Secretary</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Prabha Mehta</td>
-                                    <td><b>Member</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Aarti Seth</td>
-                                    <td><b>Member</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Urvashi Sethi</td>
-                                    <td><b>Member</b></td>
-                                </tr>
+                                @foreach ($directors as $director)
+                                    <tr>
+                                        <td>{{ $director->name }}</td>
+                                        <td><b>{{ $director->position }}</b></td>
+                                    </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>
@@ -61,50 +35,11 @@
                     <div class="">
                         <div class="table-responsive">
                             <table class="table table-bordered">
-                                <tr>
-                                    <td>Ms Kavita Madan</td>
-                                    {{-- <td><b>President</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Kiran Khanna</td>
-                                    {{-- <td><b>Vice President</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Shobha Sagar</td>
-                                    {{-- <td><b>Treasurer</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Puja Singh</td>
-                                    {{-- <td><b>Hons Secretary</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Rita Chowdhary</td>
-                                    {{-- <td><b>Hons Secretary</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Dolly Majumdar</td>
-                                    {{-- <td><b>Member</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Shashi Mudgil</td>
-                                    {{-- <td><b>Member</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Kavita Chauhan</td>
-                                    {{-- <td><b>Member</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Sunaina Bhardwaj</td>
-                                    {{-- <td><b>Member</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Sutapa</td>
-                                    {{-- <td><b>Member</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Preeti</td>
-                                    {{-- <td><b>Member</b></td> --}}
-                                </tr>
+                                @foreach ($teachers as $teacher)
+                                    <tr>
+                                        <td>{{ $teacher->name }}</td>
+                                    </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>
@@ -121,10 +56,12 @@
                     <div class="">
                         <div class="table-responsive">
                             <table class="table table-bordered">
-                                <tr>
-                                    <td>Ms Jatinder Matta</td>
-                                    {{-- <td><b>President</b></td> --}}
-                                </tr>
+                                @foreach ($stiching as $stich)
+                                    <tr>
+                                        <td>{{ $stich->name }}</td>
+                                        {{-- <td><b>President</b></td> --}}
+                                    </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>
@@ -141,22 +78,12 @@
                     <div class="">
                         <div class="table-responsive">
                             <table class="table table-bordered">
-                                <tr>
-                                    <td>Mr Kailash Chandar</td>
-                                    {{-- <td><b>President</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Champa Devi</td>
-                                    {{-- <td><b>President</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Asha Devi</td>
-                                    {{-- <td><b>President</b></td> --}}
-                                </tr>
-                                <tr>
-                                    <td>Ms Beena</td>
-                                    {{-- <td><b>President</b></td> --}}
-                                </tr>
+                                @foreach ($helpers as $helper)
+                                    <tr>
+                                        <td>{{ $helper->name }}</td>
+                                        {{-- <td><b>President</b></td> --}}
+                                    </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>
@@ -168,15 +95,17 @@
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h5>Gardeneer</h5>
+                        <h5>Gardener</h5>
                     </div>
                     <div class="">
                         <div class="table-responsive">
                             <table class="table table-bordered">
+                                @foreach ($gardeners as $gardener)
                                 <tr>
-                                    <td>Mr Sunder Singh</td>
+                                    <td>{{ $gardener->name }}</td>
                                     {{-- <td><b>President</b></td> --}}
                                 </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>

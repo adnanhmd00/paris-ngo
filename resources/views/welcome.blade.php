@@ -1,10 +1,18 @@
 @extends('layouts.head')
 @section('content')
+
+<style>
+    .panel1{ background-image:url({{ 'storage/'.$cover_image[0]->image }});}
+    .panel2{ background-image:url({{ 'storage/'.$cover_image[1]->image }});}
+    .panel3{ background-image:url({{ 'storage/'.$cover_image[2]->image }});}
+    .panel4{ background-image:url({{ 'storage/'.$cover_image[3]->image }});}
+    .panel5{ background-image:url({{ 'storage/'.$cover_image[4]->image }});}
+</style>
     <div class="d-none d-lg-block">
         <div class="panels">
             <div class="panel panel1">
                 <p></p>
-                {{-- <p>Let's</p> --}}
+                {{-- <p>Let's</p> --}}  
                 <p></p>
             </div>
             <div class="panel panel2">
@@ -64,7 +72,7 @@
                                 <i class="fa fa-lightbulb fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                                 <div class="hover-div_inner">
                                     {{-- <h3><a href="#">Windows</a></h3> --}}
-                                    <p class="text-center">Positively impacting  children and communities for over <h2 style="color: #4479bd;"><strong>20 years</strong></h2> </p>
+                                    <div class="text-center"> <?php echo  $box_text[0]->text ?></p>
                                     {{-- <div class="hover-div-lower">
                                     </div> --}}
                                 </div>
@@ -75,8 +83,8 @@
                                 <i class="fa fa-eye fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                                 <div class="hover-div_inner">
                                     {{-- <h3><a href="#">Mac</a></h3> --}}
-                                    <p class="text-center">We aim to empower  students to become life-  long learners who strive  for excellence and  actively participate in  and contribute to their communities.</p>
-                                    {{-- <div class="hover-div-lower">
+                                    <div class="text-center"> <?php echo  $box_text[1]->text ?></p>
+                                        {{-- <div class="hover-div-lower">
                                         <div class="col-xs-6 text-left"><span class="lower-text">Latest</span>High Sierra</div>
                                         <div class="col-xs-6 text-right"><span class="lower-text">Old</span>OS X 10.0</div>
                                     </div> --}}
@@ -88,8 +96,8 @@
                                 <i class="fa fa-flag fa-light fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i>
                                 <div class="hover-div_inner">
                                     {{-- <h3><a href="#">Mac</a></h3> --}}
-                                    <p class="text-center"><strong style="font-size: 32px; color: #4479bd;">165</strong> Students,<br> <strong style="font-size: 32px; color: #4479bd;">12</strong> teachers, <br><strong style="font-size: 32px; color: #4479bd;">5</strong> support staff</p>
-                                    {{-- <div class="hover-div-lower">
+                                    <div class="text-center"> <?php echo  $box_text[2]->text ?></p>
+                                        {{-- <div class="hover-div-lower">
                                         <div class="col-xs-6 text-left"><span class="lower-text">Latest</span>High Sierra</div>
                                         <div class="col-xs-6 text-right"><span class="lower-text">Old</span>OS X 10.0</div>
                                     </div> --}}
@@ -109,8 +117,8 @@
                                 {{-- <i class="fa fa-lightbulb fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i> --}}
                                 <div class="hover-div_inner">
                                     {{-- <h3><a href="#">Windows</a></h3> --}}
-                                    <p class="text-center">Positively impacting  children and communities for over <h2 style="color: #4479bd;"><strong>20 years</strong></h2> </p>
-                                    {{-- <div class="hover-div-lower">
+                                    <div class="text-center"> <?php echo  $box_text[0]->text ?></p>
+                                        {{-- <div class="hover-div-lower">
                                     </div> --}}
                                 </div>
                             </section>
@@ -120,8 +128,8 @@
                                 {{-- <i class="fa fa-eye fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i> --}}
                                 <div class="hover-div_inner">
                                     {{-- <h3><a href="#">Mac</a></h3> --}}
-                                    <p class="text-center">We aim to empower  students to become life-  long learners who strive  for excellence and  actively participate in  and contribute to their communities.</p>
-                                    {{-- <div class="hover-div-lower">
+                                    <div class="text-center"> <?php echo  $box_text[1]->text ?></p>
+                                        {{-- <div class="hover-div-lower">
                                         <div class="col-xs-6 text-left"><span class="lower-text">Latest</span>High Sierra</div>
                                         <div class="col-xs-6 text-right"><span class="lower-text">Old</span>OS X 10.0</div>
                                     </div> --}}
@@ -133,8 +141,8 @@
                                 {{-- <i class="fa fa-flag fa-light fa-2x mb-3 p-3" style="color: #4479bd; font-size: 50px;"></i> --}}
                                 <div class="hover-div_inner">
                                     {{-- <h3><a href="#">Mac</a></h3> --}}
-                                    <p class="text-center"><strong style="font-size: 32px; color: #4479bd;">165</strong> Students,<br> <strong style="font-size: 32px; color: #4479bd;">12</strong> teachers, <br><strong style="font-size: 32px; color: #4479bd;">5</strong> support staff</p>
-                                    {{-- <div class="hover-div-lower">
+                                    <div class="text-center"> <?php echo  $box_text[2]->text ?></p>
+                                        {{-- <div class="hover-div-lower">
                                         <div class="col-xs-6 text-left"><span class="lower-text">Latest</span>High Sierra</div>
                                         <div class="col-xs-6 text-right"><span class="lower-text">Old</span>OS X 10.0</div>
                                     </div> --}}
@@ -149,8 +157,9 @@
 
     <header>
         <div class="owl-carousel owl-theme mt-3">
+            @foreach ($sliders as $slider)
             <div class="item">
-                <img src="{{ asset('assets/images/slider-1.jpg') }}"
+                <img src="{{ 'storage/'.$slider->image }}"
                     alt="images not found">
                 {{-- <div class="cover">
                     <div class="container">
@@ -163,34 +172,7 @@
                     </div>
                 </div> --}}
             </div>
-            <div class="item">
-                <img src="{{ asset('assets/images/slider-2.jpg') }}"
-                    alt="images not found">
-                {{-- <div class="cover">
-                    <div class="container">
-                        <div class="header-content">
-                            <div class="line"></div>
-                            <h2></h2>
-                            <h1></h1>
-                            <h4></h4>
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
-            <div class="item">
-                <img src="{{ asset('assets/images/slider-3.jpg') }}"
-                    alt="images not found">
-                {{-- <div class="cover">
-                    <div class="container">
-                        <div class="header-content">
-                            <div class="line"></div>
-                            <h2>This is how we are working</h2>
-                            <h1>Making an impact</h1>
-                            <h4>We are educating kids.</h4>
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
+            @endforeach
         </div>
     </header>
 
