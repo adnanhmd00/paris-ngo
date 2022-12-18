@@ -26,6 +26,3 @@
         </div>
     </div>
 @endsection
-
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iure cumque vel illum eius minus unde velit debitis, deleniti, hic consequuntur corrupti! Ad quod odio quas molestiae vel ducimus sunt?

@@ -14,44 +14,53 @@
                         </a>
                         <div class="content">
                             <div class="px-4">
-                                <a href="">Vision</a>
+                                <a href="{{ route('about-us-vision') }}">Vision</a>
                             </div>
                             <div class="px-4">
-                                <a href="">Board of Directors</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="set">
-                        <a href="javascript:void(0)">
-                            School
-                            <i class="fa fa-plus"></i>
-                        </a>
-                        <div class="content">
-                            <div class="px-4">
-                                <a href="">History</a>
+                                <a href="{{ route('about-us-story') }}">Our Story</a>
                             </div>
                             <div class="px-4">
-                                <a href="">Sponsor a class</a>
+                                <a href="{{ route('about-us-team') }}">Our Team</a>
                             </div>
                             <div class="px-4">
-                                <a href="">Teacher</a>
+                                <a href="{{ route('about-us-testimonials') }}">Testimonials</a>
                             </div>
                         </div>
                     </div>
                     <div class="set">
                         <a href="javascript:void(0)">
-                            Get Involved
+                            Our Work
                             <i class="fa fa-plus"></i>
                         </a>
                         <div class="content">
                             <div class="px-4">
-                                <a href="">Sponsor a student</a>
+                                <a href="{{ route('our-work-school') }}">Monsoon Kids School</a>
                             </div>
                             <div class="px-4">
-                                <a href="">Sponsor a class</a>
+                                <a href="{{ route('our-work-sewing') }}">Sewing Classes</a>
                             </div>
                             <div class="px-4">
-                                <a href="">Gift a student sponsorship</a>
+                                <a href="{{ route('our-work-alumni') }}">Alumni Program</a>
+                            </div>
+                            <div class="px-4">
+                                <a href="{{ route('our-work-community') }}">Mahila Mandal</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="set">
+                        <a href="javascript:void(0)">
+                            Our Impact
+                            <i class="fa fa-plus"></i>
+                        </a>
+                        <div class="content">
+                            <div class="px-4">
+                                <a href="{{ route('our-impact-students') }}">Students</a>
+                            </div>
+                            <div class="px-4">
+                                <a href="{{ route('our-impact-alumni') }}">Alumni</a>
+                            </div>
+                            <div class="px-4">
+                                <a href="{{ route('our-impact-community') }}">Community</a>
                             </div>
                         </div>
                     </div>
