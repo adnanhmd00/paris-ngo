@@ -12,7 +12,7 @@
                     <?php echo $al->text; ?>
                     @endif
                     <div class="text-center mt-2">
-                        <img src="/storage/{{ $al->image }}" style=" width: 500px;" alt="">
+                        <img src="/storage/{{ $al->image }}" style=" width: 500px;" class="img-fluid" alt="">
                         {{-- <video width="100%" height="400" controls>
                             <source src="{{ asset('assets/images/alumni-video.mp4') }}" type="video/mp4">
                             <source src="movie.ogg" type="video/ogg">

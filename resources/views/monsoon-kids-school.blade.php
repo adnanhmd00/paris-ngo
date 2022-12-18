@@ -44,7 +44,7 @@
                         <div class="col-md-12">
                             <div class="text-center">
                                 @if($infra != '')
-                                <img src="/storage/{{ $infra->image }}" alt="">
+                                <img src="/storage/{{ $infra->image }}" class="img-fluid" alt="">
                                 @endif
                             </div>
                         </div>
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div class="card mt-3 rounded p-4">
+        <div class="card mt-3 rounded p-1">
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">

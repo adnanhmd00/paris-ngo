@@ -4,7 +4,7 @@
         <div class="text-center">
             <h3 style="color: #4479bd;" class="p-2">Our Team</h3>
         </div>
-        <div class="card rounded p-4">
+        <div class="card rounded p-1">
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class="card rounded p-4 mt-2">
+        <div class="card rounded p-1 mt-2">
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
@@ -47,7 +47,7 @@
             </div>
         </div>
 
-        <div class="card rounded p-4 mt-2">
+        <div class="card rounded p-1 mt-2">
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <div class="card rounded p-4 mt-2">
+        <div class="card rounded p-1 mt-2">
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="card rounded p-4 mt-2">
+        <div class="card rounded p-1 mt-2">
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">

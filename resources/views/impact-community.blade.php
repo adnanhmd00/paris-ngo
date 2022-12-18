@@ -10,7 +10,7 @@
                     @if($community != '')
                     <?php echo $community->text; ?>
                     <div class="text-center">
-                        <img src="/storage/{{ $community->image }}" style="width: 500px;" alt="">
+                        <img src="/storage/{{ $community->image }}" style="width: 500px;" class="img-fluid" alt="">
                     </div>
                     @endif
                 </div>
