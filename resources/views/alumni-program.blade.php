@@ -7,9 +7,10 @@
         <div class="card rounded p-4">
             <div class="row container-fluid">
                 <div class="col-md-12">
-                    <?php echo $alumni->text ?>
+                    @if ($alumni != '')
+                        <?php echo $alumni->text; ?>
+                    @endif
                 </div>
-
             </div>
         </div>
     </div>

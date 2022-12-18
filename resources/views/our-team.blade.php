@@ -51,6 +51,27 @@
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
+                        <h5>Headmistress</h5>
+                    </div>
+                    <div class="">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                @foreach ($headmistresses as $headmistress)
+                                    <tr>
+                                        <td>{{ $headmistress->name }}</td>
+                                    </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card rounded p-4 mt-2">
+            <div class="row container-fluid">
+                <div class="col-md-12">
+                    <div class="text-center">
                         <h5>Stiching Classes</h5>
                     </div>
                     <div class="">
@@ -73,7 +94,7 @@
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h5>Helpers</h5>
+                        <h5>Support Staff</h5>
                     </div>
                     <div class="">
                         <div class="table-responsive">
@@ -83,28 +104,6 @@
                                         <td>{{ $helper->name }}</td>
                                         {{-- <td><b>President</b></td> --}}
                                     </tr>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card rounded p-4 mt-2">
-            <div class="row container-fluid">
-                <div class="col-md-12">
-                    <div class="text-center">
-                        <h5>Gardener</h5>
-                    </div>
-                    <div class="">
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                @foreach ($gardeners as $gardener)
-                                <tr>
-                                    <td>{{ $gardener->name }}</td>
-                                    {{-- <td><b>President</b></td> --}}
-                                </tr>
                                 @endforeach
                             </table>
                         </div>

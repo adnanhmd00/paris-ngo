@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Our Work (Community Outreach)</h1>
+            <h1 class="h3 mb-0 text-gray-800">About Us Testimonials</h1>
             <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New</button>
         </div>
     </div>
@@ -12,15 +12,17 @@
         <table class="table">
             <tr>
                 <th>#</th>
+                <th>Name</th>
                 <th>Text</th>
                 <th>Image</th>
                 <th>Action</th>
             </tr>
-            @foreach ($community as $comm)
+            @foreach ($testimonials as $testimonial)
                 <tr>
                     <td>#</td>
-                    <td>{{ substr($comm->text, 0, 20 ) }}</td>
-                    <td><img src="/storage/{{ $comm->image }}" style="width: 100px;" alt=""></td>
+                    <td>{{ $testimonial->name }}</td>
+                    <td>{{ substr($testimonial->text, 0, 20 ) }}</td>
+                    <td><img src="/storage/{{ $testimonial->image }}" style="width: 100px;" alt=""></td>
                     <td><a href="" class="btn btn-primary">Edit</a></td>
                 </tr>
             @endforeach
@@ -35,15 +37,17 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Add New Mahila </h4>
+                    <h4 class="modal-title">Add New Testimonial </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
-
-                    <form action="{{ route('admin.work-add-community') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.about-us.add-testimonials') }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        <div class="form-group">
+                            <input type="text" placeholder="Add A Name" name="name" class="form-control">
+                        </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                 <textarea name="text" id="editor" col="10"></textarea>

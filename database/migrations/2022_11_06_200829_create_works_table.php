@@ -17,6 +17,7 @@ class CreateWorksTable extends Migration
             $table->id();
             $table->string('type');
             $table->longText('text');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

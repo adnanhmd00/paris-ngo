@@ -18,6 +18,17 @@
                 <div class="col-md-12">
                     <textarea name="text" id="editor" col="10">@if($community != ''){{ $community->text }}@endif</textarea>
                 </div>
+                <div class="row">
+                    <div class="col-md-8 mt-4">
+                        <input type="file" name="image" class="form-control" id="">
+                    </div>
+                    @if($community != '')
+                    
+                    <div class="col-md-4 mt-2">
+                        <img src="/storage/{{ $community->image }}" style="width: 200px;" alt="" class="border p-3">
+                    </div>
+                    @endif
+                </div>
                 <div class="text-center mt-3">
                     <button class="btn btn-primary btn-sm">Submit</button>
                 </div>

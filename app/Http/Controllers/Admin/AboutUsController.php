@@ -8,6 +8,7 @@ use App\Models\Vision;
 use App\Models\Story;
 use App\Models\Team;
 use App\Models\Gallery;
+use App\Models\Testimonial;
 use Str;
 
 class AboutUsController extends Controller
@@ -51,6 +52,11 @@ class AboutUsController extends Controller
     public function postStory(Request $request){
         $story = new Story;
         $story->story = $request->story;
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $vision->image = $request->image->storeAs('stories', $imgName, 'public');
+        }
         if($story->save()){
             return back()->with('success', 'Story saved successfully');
         }
@@ -59,6 +65,11 @@ class AboutUsController extends Controller
     public function updateStory(Request $request){
         $story = Story::first();
         $story->story = $request->story;
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $story->image = $request->image->storeAs('stories', $imgName, 'public');
+        }
         if($story->save()){
             return back()->with('success', 'Story saved successfully');
         }
@@ -69,10 +80,11 @@ class AboutUsController extends Controller
         $teams = Team::all();
         $directors = Team::where('type', 'director')->get();
         $teachers = Team::where('type', 'teacher')->get();
+        $headmistresses = Team::where('type', 'headmistress')->get();
         $stichings = Team::where('type', 'stiching')->get();
         $helpers = Team::where('type', 'helper')->get();
         $gardeners = Team::where('type', 'gardener')->get();
-        return view('admin.about-us.team', compact('teams', 'directors', 'teachers', 'stichings', 'helpers', 'gardeners'));
+        return view('admin.about-us.team', compact('teams', 'directors', 'teachers', 'headmistresses', 'stichings', 'helpers', 'gardeners'));
     }
 
     public function addTeamDirector(Request $request){
@@ -108,6 +120,23 @@ class AboutUsController extends Controller
         $team->name = $request->name;
         if($team->save()){
             return back()->with('success', 'Teacher saved successfully');
+        }
+    }
+
+    public function addTeamHeadMistress(Request $request){
+        $team = new Team;
+        $team->name = $request->name;
+        $team->type = 'headmistress';
+        if($team->save()){
+            return back()->with('success', 'Head Mistress saved successfully');
+        }
+    }
+
+    public function updateTeamHeadMistress(Request $request, $id){
+        $team = Team::findOrFail($id);
+        $team->name = $request->name;
+        if($team->save()){
+            return back()->with('success', 'Head Mistress saved successfully');
         }
     }
 
@@ -163,8 +192,24 @@ class AboutUsController extends Controller
     }
 
 
-    public function ourSupporters(){
-        return view('admin.about-us.supporters');
+    public function testimonials(){
+        $testimonials = Testimonial::all();
+        return view('admin.about-us.testimonials', compact('testimonials'));
+    }
+    
+    public function addTestimonials(Request $request){
+        $testimonial = new Testimonial();
+        $testimonial->name = $request->name;
+        $testimonial->text = $request->text;
+        $testimonial->status = '1';
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $testimonial->image = $request->image->storeAs('testimonials', $imgName, 'public');
+        }
+        if($testimonial->save()){
+            return back()->with('success', 'Testimonial saved successfully');
+        }
     }
 
     public function gallery(){

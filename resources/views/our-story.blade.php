@@ -9,6 +9,9 @@
                 <div class="col-md-12">
                     <?php echo $story->story; ?>
                 </div>
+                <div class="text-center">
+                    <img src="/storage/{{ $story->image }}" class="img-fluid" alt="">
+                </div>
             </div>
         </div>
     </div>

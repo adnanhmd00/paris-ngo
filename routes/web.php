@@ -38,12 +38,13 @@ Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('about-us/vision', [AboutUsController::class, 'vision'])->name('about-us-vision');
 Route::get('about-us/our-story', [AboutUsController::class, 'ourStory'])->name('about-us-story');
 Route::get('about-us/our-team', [AboutUsController::class, 'ourTeam'])->name('about-us-team');
-Route::get('about-us/our-supporters', [AboutUsController::class, 'ourSupporters'])->name('about-us-supporter');
+Route::get('about-us/testimonials', [AboutUsController::class, 'testimonials'])->name('about-us-testimonials');
 Route::get('school/history', [SchoolController::class, 'history'])->name('school-history');
 
 Route::get('our-work/monsoon-kids-school', [WorkController::class, 'theSchool'])->name('our-work-school');
 Route::get('our-work/alumni-program', [WorkController::class, 'alumniProgram'])->name('our-work-alumni');
-Route::get('our-work/community-outreach', [WorkController::class, 'communityOutreach'])->name('our-work-community');
+Route::get('our-work/mahila-mandal', [WorkController::class, 'communityOutreach'])->name('our-work-community');
+Route::get('our-work/sewing-classes', [WorkController::class, 'sewingClasses'])->name('our-work-sewing');
 
 Route::get('our-impact/students', [ImpactController::class, 'students'])->name('our-impact-students');
 Route::get('our-work/alumni', [ImpactController::class, 'alumni'])->name('our-impact-alumni');

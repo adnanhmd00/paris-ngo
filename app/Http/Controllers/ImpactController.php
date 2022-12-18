@@ -14,7 +14,7 @@ class ImpactController extends Controller
     }
 
     public function alumni(){
-        $alumni = Impact::where('type', 'alumni')->first();
+        $alumni = Impact::where('type', 'alumni')->get();
         return view('impact-alumni', compact('alumni'));
     }
 

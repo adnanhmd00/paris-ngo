@@ -121,6 +121,60 @@
     </div>
 
     <div class="card p-3 m-3">
+        <h4>Headmistresses</h4>
+        <div class="text-right mb-2">
+            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-headmistress">Add New HeadMistress</button>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                    @foreach ($headmistresses as $headmistress)
+                        <tr>
+                            <td>{{ $headmistress->name }}</td>
+                            <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                    data-target="#update-headmistress-{{ $headmistress->id }}">Edit</button>
+
+                                <!-- Edit Teacher Modal -->
+                                <div class="modal fade" id="update-headmistress-{{ $headmistress->id }}" role="dialog"
+                                    aria-labelledby="update-headmistress-label-{{ $headmistress->id }}" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="update-headmistress-label-{{ $headmistress->id }}">
+                                                    Update Headmistress</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="{{ route('admin.update-team-headmistress', $headmistress->id) }}"
+                                                    method="POST" enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="form-group">
+                                                        <input type="text" name="name" class="form-control my-3"
+                                                            placeholder="Name Of Headmistress" value="{{ $headmistress->name }}">
+                                                        <button type="submit"
+                                                            class="btn btn-primary btn-sm">Submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card p-3 m-3">
         <h4>Stiching Classes</h4>
         <div class="text-right mb-2">
             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-stiching">Add New Stiching
@@ -230,7 +284,7 @@
         </div>
     </div>
 
-    <div class="card p-3 m-3">
+    {{-- <div class="card p-3 m-3">
         <h4>Gardener</h4>
         <div class="text-right mb-2">
             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-gardener">Add New
@@ -283,7 +337,7 @@
                     </table>
                 </div>
             </div>
-    </div>
+    </div> --}}
 @endsection
 
 
@@ -331,6 +385,32 @@
                         <input type="text" name="name" class="form-control my-3"
                             placeholder="Name Of Teacher">
                         <input type="hidden" name="type" value="director">
+                        <button class="btn btn-primary btn-sm">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add New Teacher Modal -->
+<div class="modal fade" id="add-headmistress" tabindex="-1" role="dialog" aria-labelledby="headmistressModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="headmistressModalLabel">Add New Headmistress</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('admin.add-team-headmistress') }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control my-3"
+                            placeholder="Name Of Headmistress">
+                        <input type="hidden" name="type" value="headmistress">
                         <button class="btn btn-primary btn-sm">Submit</button>
                     </div>
                 </form>
@@ -396,7 +476,7 @@
 </div>
 
 <!-- Add New Gardener Modal -->
-<div class="modal fade" id="add-gardener" tabindex="-1" role="dialog" aria-labelledby="gardenerModalLabel"
+{{-- <div class="modal fade" id="add-gardener" tabindex="-1" role="dialog" aria-labelledby="gardenerModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -417,5 +497,5 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>

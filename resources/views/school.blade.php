@@ -18,14 +18,7 @@
                 <div class="text-part col-md-6">
                     <h2>Our Principles</h2>
                     
-                    <p>We strive to </p>
-                    <p>Create a safe, joyful and inclusive environment that is conducive to learning</p>
-                    <p>Encourage holistic development that includes  the intellectual, physical, social, creative and  emotional growth of every child </p>
-                    <p>Foster a sense of intellectual curiosity and  reflection </p>
-                    <p>Inculcate empathy, compassion and respect  for each other and their environment </p>
-                    <p>Engage all stakeholders in the child’s  education, including teachers, alumni, parents,  and theircommunities </p>
-                    <p>Ensure learning is contextual, relevant and  linked to the lives and environment of children </p>
-            
+                  <?php // echo $principle->content; ?>
                 </div>
                 <div class="image-part col-md-6">
                     <div class="about-quick-box row">

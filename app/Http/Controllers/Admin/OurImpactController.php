@@ -60,14 +60,19 @@ class OurImpactController extends Controller
     }
 
     public function alumni(){
-        $alumni = Impact::where('type', 'alumni')->first();
-        return view('admin.our-impact.alumni', compact('alumni'));
+        $alumnis = Impact::where('type', 'alumni')->get();
+        return view('admin.our-impact.alumni', compact('alumnis'));
     }
 
     public function postAlumni(Request $request){
         $alumni = new Impact;
         $alumni->text = $request->text;
         $alumni->type = 'alumni';
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $alumni->image = $request->image->storeAs('alumni', $imgName, 'public');
+        }
         if($alumni->save()){
             return back()->with('success', 'Alumni Data saved successfully');
         }
@@ -76,6 +81,11 @@ class OurImpactController extends Controller
     public function updateAlumni(Request $request){
     $alumni = Impact::where('type', 'alumni')->first();
         $alumni->text = $request->text;
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $alumni->image = $request->image->storeAs('alumnni', $imgName, 'public');
+        }
         if($alumni->save()){
             return back()->with('succes', 'Alumni Data saved successfully');
         }
@@ -90,6 +100,11 @@ class OurImpactController extends Controller
         $community = new Impact;
         $community->text = $request->text;
         $community->type = 'community';
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $community->image = $request->image->storeAs('impact-community', $imgName, 'public');
+        }
         if($community->save()){
             return back()->with('success', 'Community Data saved successfully');
         }

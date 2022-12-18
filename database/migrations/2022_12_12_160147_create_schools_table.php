@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImpactsTable extends Migration
+class CreateSchoolsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateImpactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('impacts', function (Blueprint $table) {
+        Schema::create('schools', function (Blueprint $table) {
             $table->id();
-            $table->longText('text');
-            $table->longText('image')->nullable;
+            $table->string('title');
+            $table->longText('content')->nullable();
+            $table->string('image')->nullable();
+            $table->string('second_image')->nullable();
+            $table->string('image_first_text')->nullable();
+            $table->string('image_second_text')->nullable();
             $table->string('type');
             $table->timestamps();
         });
@@ -29,6 +33,6 @@ class CreateImpactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('impacts');
+        Schema::dropIfExists('schools');
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Vision;
 use App\Models\Story;
 use App\Models\Team;
+use App\Models\Testimonial;
 
 class AboutUsController extends Controller
 {
@@ -42,14 +43,16 @@ class AboutUsController extends Controller
     public function ourTeam(){
         $directors = Team::where('type', 'director')->get();
         $teachers = Team::where('type', 'teacher')->get();
+        $headmistresses = Team::where('type', 'headmistress')->get();
         $stiching = Team::where('type', 'stiching')->get();
         $helpers = Team::where('type', 'helper')->get();
-        $gardeners = Team::where('type', 'gardener')->get();
-        return view('our-team', compact('directors', 'teachers', 'stiching', 'helpers', 'gardeners'));
+        // $gardeners = Team::where('type', 'gardener')->get();
+        return view('our-team', compact('directors', 'teachers', 'headmistresses', 'stiching', 'helpers'));
     }
 
-    public function ourSupporter(){
-        return view('our-team');
+    public function testimonials(){
+        $testimonials = Testimonial::where('status', 1)->get();
+        return view('about-us-testimonials', compact('testimonials'));
     }
 
     public function gallery(){

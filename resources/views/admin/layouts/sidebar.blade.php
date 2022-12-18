@@ -67,7 +67,7 @@
                         <a class="collapse-item" href="{{ route('admin.about-us.vision') }}">Vision</a>
                         <a class="collapse-item" href="{{ route('admin.about-us.story') }}">Our Story</a>
                         <a class="collapse-item" href="{{ route('admin.about-us.team') }}">Our Team</a>
-                        <a class="collapse-item" href="{{ route('admin.about-us.supporters') }}">Our Supporters</a>
+                        <a class="collapse-item" href="{{ route('admin.about-us.testimonials') }}">Testimmonials</a>
                         <a class="collapse-item" href="{{ route('admin.about-us.gallery') }}">Gallery</a>
                     </div>
                 </div>
@@ -82,6 +82,7 @@
                 <div id="our-work" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="{{ route('admin.our-work.school') }}">Monsoon Kids School</a>
+                        <a class="collapse-item" href="{{ route('admin.our-work.sewing') }}">Sewing Classes</a>
                         <a class="collapse-item" href="{{ route('admin.our-work.alumni') }}">Alumni Program</a>
                         <a class="collapse-item" href="{{ route('admin.our-work.community') }}">Community Outreach</a>
                     </div>

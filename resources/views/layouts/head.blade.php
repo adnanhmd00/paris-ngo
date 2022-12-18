@@ -494,9 +494,9 @@
             <nav style="z-index: 99">
                 <div class="nav-mobile"><a id="navbar-toggle" href="javascript:void(0)"><span></span></a></div>
                 <ul class="nav-list mt-1">
-                    {{-- <li>
-                        <a href="#!">Home</a>
-                    </li> --}}
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
 
                     <li>
                         <a href="#">About Us</a>
@@ -512,7 +512,7 @@
                                 <a href="{{ route('about-us-team') }}">Our Team</a>
                             </li>
                             <li>
-                                <a href="{{ route('about-us-supporter') }}">Our Supporters</a>
+                                <a href="{{ route('about-us-testimonials') }}">Testimonials</a>
                             </li>
                             {{-- <li>
                                 <a href="{{ route('gallery') }}">Gallery</a>
@@ -528,10 +528,13 @@
                                 <a href="{{ route('our-work-school') }}">Monsoon Kids School</a>
                             </li>
                             <li>
+                                <a href="{{ route('our-work-sewing') }}">Sewing Classes</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('our-work-alumni') }}">Alumni Program</a>
                             </li>
                             <li>
-                                <a href="{{ route('our-work-community') }}">Community Outreach</a>
+                                <a href="{{ route('our-work-community') }}">Mahila Mandal</a>
                             </li>
                         </ul>
                     </li>
@@ -597,21 +600,21 @@
                             <!--<a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"-->
                             <!--    class="btn btn-block" href="javascript:void(0)" data-toggle="modal"-->
                             <!--    data-target="#sas">Sponsor A Student</a>-->
-                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
-                        data-target="#donate-page-box">Sponsor A Student</a>
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/SponsorAStudentAbroadDOnations" data-toggle="modal"
+                        data-target="#donate-page-box-1">Sponsor A Student</a>
                         </li>
                         <li class="my-3">
                             <!--<a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"-->
                             <!--    class="btn btn-block" href="javascript:void(0)">Sponsor A Class</a>-->
-                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
-                        data-target="#donate-page-box">Sponsor A Class</a>
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/SponsorAClassAbroadDonations" data-toggle="modal"
+                        data-target="#donate-page-box-2">Sponsor A Class</a>
                         </li>
                         <li class="my-3">
                             <!--<a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;"-->
                             <!--    class="btn btn-block" href="javascript:void(0)" data-toggle="modal"-->
                             <!--    data-target="#rzp">Donate Any Amount</a>-->
-                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/indiandonations" data-toggle="modal"
-                        data-target="#donate-page-box">Donate Any Amount</a>
+                            <a style="background: #4479bd; color: #fff; border-radius: 20px; padding: 10px;" href="https://rzp.io/l/AnyAmtAbroadDonation" data-toggle="modal"
+                        data-target="#donate-page-box-3">Donate Any Amount</a>
                         </li>
                     </ul>
                 </div>
@@ -620,11 +623,31 @@
         </div>
     </div>
 
-    <div class="modal fade" id="donate-page-box">
+    <div class="modal fade" id="donate-page-box-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center">
                 <div class="modal-body">
-                    <embed src="https://rzp.io/l/indiandonations" type="text/html" width="100%" height="500px">
+                    <embed src="https://rzp.io/l/SponsorAStudentAbroadDOnations" type="text/html" width="100%" height="500px">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="donate-page-box-2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body">
+                    <embed src="https://rzp.io/l/SponsorAClassAbroadDonations" type="text/html" width="100%" height="500px">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="donate-page-box-3">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body">
+                    <embed src="https://rzp.io/l/AnyAmtAbroadDonation" type="text/html" width="100%" height="500px">
                 </div>
 
             </div>

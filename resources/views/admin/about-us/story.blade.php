@@ -19,6 +19,13 @@
                 <div class="col-md-12">
                     <textarea name="story" id="editor" col="10">{{ $story->story }}</textarea>
                 </div>
+                <div class="col-md-12 mt-4">
+                    <div class="custom-file">
+                        <input type="file" name="image" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose an image</label>
+                      </div>
+                </div>
+                <img src="/storage/{{ $story->image }}" alt="" style="width: 200px;" class="img-fluid p-2 border m-3">
                 <div class="text-center mt-3">
                     <button class="btn btn-primary btn-sm">Submit</button>
                 </div>

@@ -7,7 +7,12 @@
         <div class="card rounded p-4">
             <div class="row container-fluid">
                 <div class="col-md-12">
+                    @if($community != '')
                     <?php echo $community->text; ?>
+                    <div class="text-center">
+                        <img src="/storage/{{ $community->image }}" style="width: 500px;" alt="">
+                    </div>
+                    @endif
                 </div>
                 {{-- Pls put lots of photos of children playing, mahila mandal, dental camp, annual day, Taekwando etc --}}
             </div>

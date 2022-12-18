@@ -88,6 +88,9 @@ Route::prefix('admin')->group(function () {
     
     Route::post('about-us/add-team-teacher', [AboutUsController::class, 'addTeamTeacher'])->name('admin.add-team-teacher');
     Route::post('about-us/update-team-teacher/{id}', [AboutUsController::class, 'updateTeamTeacher'])->name('admin.update-team-teacher');
+
+    Route::post('about-us/add-team-headmistress', [AboutUsController::class, 'addTeamHeadmistress'])->name('admin.add-team-headmistress');
+    Route::post('about-us/update-team-headmistress/{id}', [AboutUsController::class, 'updateTeamHeadmistress'])->name('admin.update-team-headmistress');
     
     Route::post('about-us/add-team-stiching', [AboutUsController::class, 'addTeamStiching'])->name('admin.add-team-stiching');
     Route::post('about-us/update-team-stiching/{id}', [AboutUsController::class, 'updateTeamStiching'])->name('admin.update-team-stiching');
@@ -98,7 +101,8 @@ Route::prefix('admin')->group(function () {
     Route::post('about-us/add-team-gardener', [AboutUsController::class, 'addTeamGardener'])->name('admin.add-team-gardener');
     Route::post('about-us/update-team-gardener/{id}', [AboutUsController::class, 'updateTeamGardener'])->name('admin.update-team-gardener');
     
-    Route::get('about-us/supporters', [AboutUsController::class, 'ourSupporters'])->name('admin.about-us.supporters');
+    Route::get('about-us/testimonials', [AboutUsController::class, 'testimonials'])->name('admin.about-us.testimonials');
+    Route::post('about-us/add-testimonials', [AboutUsController::class, 'addTestimonials'])->name('admin.about-us.add-testimonials');
 
     Route::get('about-us/gallery', [AboutUsController::class, 'gallery'])->name('admin.about-us.gallery');
     Route::post('about-us/add-gallery-image', [AboutUsController::class, 'postGallery'])->name('admin.add-gallery-image');
@@ -113,9 +117,32 @@ Route::prefix('admin')->group(function () {
     Route::get('our-work/alumni', [OurWorkController::class, 'alumniProgram'])->name('admin.our-work.alumni');
     Route::post('our-work-add-alumni', [OurWorkController::class, 'postAlumniProgram'])->name('admin.work-add-alumni');
     Route::post('our-work-update-alumni', [OurWorkController::class, 'updateAlumniProgram'])->name('admin.work-update-alumni');
+    Route::get('our-work/sewing', [OurWorkController::class, 'SewingClasses'])->name('admin.our-work.sewing');
+    Route::post('our-work-add-sewing', [OurWorkController::class, 'postSewingClasses'])->name('admin.work-add-sewing');
+    Route::post('our-work-add-sewing-image', [OurWorkController::class, 'addSewingImage'])->name('admin.work-add-sewing-image');
+    Route::get('our-work-delete-sewing-image/{id}', [OurWorkController::class, 'deleteSewingImage'])->name('admin.work-delete-sewing-image');
+    Route::post('our-work-update-sewing', [OurWorkController::class, 'updateSewingClasses'])->name('admin.work-update-sewing');
     Route::get('our-work/community', [OurWorkController::class, 'communityOutreach'])->name('admin.our-work.community');
     Route::post('our-work-add-community', [OurWorkController::class, 'postCommunityOutreach'])->name('admin.work-add-community');
     Route::post('our-work-update-community', [OurWorkController::class, 'updateCommunityOutreach'])->name('admin.work-update-community');
+
+    Route::get('our-work/school/add-principles', [OurWorkController::class, 'addPrinciple'])->name('admin.our-work.add-school-principles');
+    Route::post('our-work/school/add-principles', [OurWorkController::class, 'submitPrinciple'])->name('admin.our-work.add-school-principles');
+    Route::get('our-work/school/edit-principles', [OurWorkController::class, 'editPrinciple'])->name('admin.our-work.edit-school-principles');
+    Route::post('our-work/school/update-principles', [OurWorkController::class, 'updatePrinciple'])->name('admin.our-work.update-school-principles');
+    Route::get('our-work/school/add-graph', [OurWorkController::class, 'addGraph'])->name('admin.our-work.add-graph');
+    Route::post('our-work/school/add-graph', [OurWorkController::class, 'submitGraph'])->name('admin.our-work.add-graph');
+    Route::get('our-work/school/edit-graph', [OurWorkController::class, 'editGraph'])->name('admin.our-work.edit-graph');
+    Route::post('our-work/school/update-graph', [OurWorkController::class, 'updateGraph'])->name('admin.our-work.update-graph');
+    Route::get('our-work/school/add-infra', [OurWorkController::class, 'addSchoolInfra'])->name('admin.our-work.add-infra');
+    Route::post('our-work/school/add-infra', [OurWorkController::class, 'submitSchoolInfra'])->name('admin.our-work.add-infra');
+    Route::get('our-work/school/edit-infra', [OurWorkController::class, 'editSchoolInfra'])->name('admin.our-work.edit-infra');
+    Route::post('our-work/school/update-infra', [OurWorkController::class, 'updateSchoolInfra'])->name('admin.our-work.update-infra');
+    Route::get('our-work/school/add-curricullum', [OurWorkController::class, 'addSchoolCurricullum'])->name('admin.our-work.add-curricullum');
+    Route::post('our-work/school/add-curricullum', [OurWorkController::class, 'submitSchoolCurricullum'])->name('admin.our-work.add-curricullum');
+    Route::get('our-work/school/edit-curricullum', [OurWorkController::class, 'editSchoolCurricullum'])->name('admin.our-work.edit-curricullum');
+    Route::get('our-work/school/edit-single-curricullum/{id}', [OurWorkController::class, 'editSingleCurricullum'])->name('admin.our-work.edit-single-curricullum');
+    Route::post('our-work/school/update-curricullum/{id}', [OurWorkController::class, 'updateSchoolCurricullum'])->name('admin.our-work.update-curricullum');
     // ------------------------------------------------------------------------------------------
 
     // ---------------------------------------- OUR IMPACT   ----------------------------------------
