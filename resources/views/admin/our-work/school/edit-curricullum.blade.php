@@ -27,7 +27,10 @@
                     <td><img src="/storage/{{ $curricullum->second_image }}" style="width: 100px;" alt=""></td>
                     <td>{{ $curricullum->image_first_text }}</td>
                     <td>{{ $curricullum->image_second_text }}</td>
-                    <td><a href="{{ route('admin.our-work.edit-single-curricullum', $curricullum->id) }}" class="btn btn-primary btn-sm">Edit </a></td>
+                    <td>
+                        <a href="{{ route('admin.our-work.edit-single-curricullum', $curricullum->id) }}" class="btn btn-primary btn-sm">Edit </a>
+                        <a  class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.our-work.delete-curricullum', $curricullum->id) }}" >Delete</a>
+                    </td>
                 </tr>
             @endforeach
         </table>

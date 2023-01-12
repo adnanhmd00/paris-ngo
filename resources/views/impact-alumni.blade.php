@@ -11,14 +11,28 @@
                     @if($al != '')
                     <?php echo $al->text; ?>
                     @endif
-                    <div class="text-center mt-2">
-                        <img src="/storage/{{ $al->image }}" style=" width: 500px;" class="img-fluid" alt="">
-                        {{-- <video width="100%" height="400" controls>
-                            <source src="{{ asset('assets/images/alumni-video.mp4') }}" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video> --}}
-                    </div>
+                    
+                    @if($al->file_type == 'youtube')
+                        <div class="container text-center mt-3">
+                                <iframe width="320" height="240" src="{{ $al->image }}"></iframe>
+                        </div>
+                    @elseif($al->file_type == 'facebook')
+                        <div class="container text-center mt-3">
+                                <iframe src="{{ $al->image }}" width="320" height="240" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    @elseif($al->file_type == 'image')
+                        <div class="container text-center mt-3">
+                            <img src="/storage/{{ $al->image }}" alt="" width="320" height="240">
+                        </div>
+                    @elseif($al->file_type == 'video')
+                        <div class="container text-center mt-3">
+                        <video width="320" height="240" controls>
+                                <source src="/storage/{{ $al->image }}" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

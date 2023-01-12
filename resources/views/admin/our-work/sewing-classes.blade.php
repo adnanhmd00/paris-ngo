@@ -37,7 +37,7 @@
                 <tr>
                     <td></td>
                     <td><img src="/storage/{{ $image->image }}" style="width: 100px;" alt=""></td>
-                    <td><a class="btn btn-danger" href="{{ route('admin.work-delete-sewing-image', $image->id) }}">Delete</a></td>
+                    <td><a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.work-delete-sewing-image', $image->id) }}">Delete</a></td>
                 </tr>
             @endforeach
         </table>

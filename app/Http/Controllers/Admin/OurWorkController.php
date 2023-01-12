@@ -21,7 +21,8 @@ class OurWorkController extends Controller
 
     public function alumniProgram(){
         $alumni = Work::where('type', 'alumni')->first();
-        return view('admin.our-work.alumni-program', compact('alumni'));
+        $alumni_images = Work::where('type', 'alumni-images')->get();
+        return view('admin.our-work.alumni-program', compact('alumni', 'alumni_images'));
     }
 
 
@@ -33,6 +34,22 @@ class OurWorkController extends Controller
             return back()->with('success', 'Alumni Saved Successfully');
         }
     }
+
+    
+    public function addAlumniImage(Request $request){
+        $alumni = new Work;
+        $alumni->type = 'alumni-images';
+        $alumni->text = $request->text;
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $alumni->image = $request->image->storeAs('alumni-images', $imgName, 'public');
+        }
+        if($alumni->save()) {
+            return back()->with('success', 'Alumni Image Saved Success');
+        }
+    }
+
 
 
     public function sewingClasses(){
@@ -284,6 +301,15 @@ class OurWorkController extends Controller
         $curricullum= School::where('id', $id)->first();
         $content = School::where('type', 'curricullum')->first();
         return view('admin.our-work.school.edit-single-curricullum', compact('curricullum', 'content'));
+    }
+
+    public function deleteSingleCurricullum($id){
+        $curricullum= School::where('id', $id)->first();
+        $content = School::where('type', 'curricullum')->first();
+        $curricullums = School::where('type', 'curricullum')->get();
+        if($curricullum->delete()){
+            return redirect()->route('admin.our-work.edit-curricullum', compact('curricullums', 'content'))->with('success', 'Curricullum Deleted Successfully');
+        }
     }
 
     public function updateSchoolCurricullum(Request $request, $id){

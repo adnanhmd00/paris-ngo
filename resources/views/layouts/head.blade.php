@@ -623,6 +623,17 @@
         </div>
     </div>
 
+    <div class="modal fade" id="donate-page-box">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body">
+                    <embed src="https://rzp.io/l/AnyAmtAbroadDonation" type="text/html" width="100%" height="500px">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="donate-page-box-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center">

@@ -24,7 +24,8 @@ class WorkController extends Controller
     }
     public function alumniProgram(){
         $alumni = Work::where('type', 'alumni')->first();
-        return view('alumni-program', compact('alumni'));
+        $alumni_image = Work::where('type', 'alumni-images')->get();
+        return view('alumni-program', compact('alumni', 'alumni_image'));
     }
 
     public function communityOutreach(){

@@ -18,6 +18,7 @@ class CreateImpactsTable extends Migration
             $table->longText('text');
             $table->longText('image')->nullable;
             $table->string('type');
+            $table->string('file_type');
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@
             <div class="row container-fluid">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h5>School Principles</h5>
+                        <h5>School Principals</h5>
                     </div>
                     <div>
                        <?php echo $principle->content; ?>

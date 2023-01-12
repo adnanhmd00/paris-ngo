@@ -24,4 +24,55 @@
         </div>
         </form>
     </div>
+    
+
+    <div class="card p-3 m-3">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Image</button>
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+            @foreach ($alumni_images as $image)
+                <tr>
+                    <td></td>
+                    <td><img src="/storage/{{ $image->image }}" style="width: 100px;" alt=""></td>
+                    <td><a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.work-delete-sewing-image', $image->id) }}">Delete</a></td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
 @endsection
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add New Image</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="{{ route('admin.work-add-alumni-image') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="col-md-12 mb-2">
+                <input type="file" name="image" id="">
+            </div>
+            
+            <div class="col-md-12 mt-2">
+                <textarea name="text" id="editor2" cols="30" rows="10"></textarea>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>

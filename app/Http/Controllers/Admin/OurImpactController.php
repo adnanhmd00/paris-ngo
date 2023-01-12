@@ -68,26 +68,67 @@ class OurImpactController extends Controller
         $alumni = new Impact;
         $alumni->text = $request->text;
         $alumni->type = 'alumni';
+        $alumni->file_type = $request->file_type;
+                
+        if($request->youtube != null){
+            $alumni->image = $request->youtube;
+        }
+        
+        if($request->facebook != null){
+            $alumni->image = $request->facebook;
+        }
+
         if($request->hasFile('image')){
             $random = Str::random(10);
             $imgName = $random.'.'.$request->image->extension();
             $alumni->image = $request->image->storeAs('alumni', $imgName, 'public');
+        }else if ($request->has('video')) {
+            $path = $request->file('video')->store('videos', ['disk' => 'alumni-videos']);
+            $alumni->image = $path;
         }
         if($alumni->save()){
             return back()->with('success', 'Alumni Data saved successfully');
         }
     }
 
-    public function updateAlumni(Request $request){
-    $alumni = Impact::where('type', 'alumni')->first();
+    public function updateAlumni(Request $request, $id){
+        // dd($request->all());
+        $alumni = Impact::findOrFail($id);
+        // dd($alumni);
         $alumni->text = $request->text;
+        $alumni->type = 'alumni';
+        
+        if($request->file_type == null){
+            $alumni->file_type = $alumni->file_type;
+        }else{
+            $alumni->file_type = $request->file_type;
+        }
+        
+        if($request->youtube != null){
+            $alumni->image = $request->youtube;
+        }
+        
+        if($request->facebook != null){
+            $alumni->image = $request->facebook;
+        }
+
         if($request->hasFile('image')){
             $random = Str::random(10);
             $imgName = $random.'.'.$request->image->extension();
-            $alumni->image = $request->image->storeAs('alumnni', $imgName, 'public');
+            $alumni->image = $request->image->storeAs('alumni', $imgName, 'public');
+        }else if ($request->has('video')) {
+            $path = $request->file('video')->store('videos', ['disk' => 'alumni-videos']);
+            $alumni->image = $path;
         }
         if($alumni->save()){
-            return back()->with('succes', 'Alumni Data saved successfully');
+            return back()->with('success', 'Alumni Data saved successfully');
+        }
+    }
+
+    public function deleteAlumni($id){
+        $alumni = Impact::where('type', 'alumni')->first();
+        if($alumni->delete()){
+            return back()->with('succes', 'Alumni Data deleted successfully');
         }
     }
 

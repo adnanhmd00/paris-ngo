@@ -53,6 +53,11 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
+        'alumni-videos' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public'),
+         ]
+
     ],
 
     /*

@@ -191,6 +191,13 @@ class AboutUsController extends Controller
         }
     }
 
+    public function deleteTeam($id){
+        $team = Team::findOrFail($id);
+        if($team->delete()){
+            return back()->with('success', 'Team member deleted successfully');
+        }
+    }
+
 
     public function testimonials(){
         $testimonials = Testimonial::all();
@@ -209,6 +216,28 @@ class AboutUsController extends Controller
         }
         if($testimonial->save()){
             return back()->with('success', 'Testimonial saved successfully');
+        }
+    }
+
+    public function updateTestimonials(Request $request, $id){
+        $testimonial = Testimonial::findOrFail($id);
+        $testimonial->name = $request->name;
+        $testimonial->text = $request->text;
+        $testimonial->status = $request->status;
+        if($request->hasFile('image')){
+            $random = Str::random(10);
+            $imgName = $random.'.'.$request->image->extension();
+            $testimonial->image = $request->image->storeAs('testimonials', $imgName, 'public');
+        }
+        if($testimonial->save()){
+            return back()->with('success', 'Testimonial saved successfully');
+        }
+    }
+
+    public function deleteTestimonial($id){
+        $testimonial = Testimonial::findOrFail($id);
+        if($testimonial->delete()){
+            return back()->with('success', 'Testimonial deleted successfully');
         }
     }
 

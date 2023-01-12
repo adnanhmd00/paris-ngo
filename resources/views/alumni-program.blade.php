@@ -12,6 +12,16 @@
                     @endif
                 </div>
             </div>
+            <div class="text-center">
+                <div class="row my-2">
+                    @foreach($alumni_image as $image)
+                    <div class="col-md-4 my-2">
+                        <img src="/storage/{{ $image->image }}" class="img-fluid" style="height:300px" alt="">
+                        <p><?php echo $image->text ?></p>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </div>
 @endsection

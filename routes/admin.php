@@ -100,9 +100,14 @@ Route::prefix('admin')->group(function () {
     
     Route::post('about-us/add-team-gardener', [AboutUsController::class, 'addTeamGardener'])->name('admin.add-team-gardener');
     Route::post('about-us/update-team-gardener/{id}', [AboutUsController::class, 'updateTeamGardener'])->name('admin.update-team-gardener');
+
+    Route::get('about-us/delete-team/{id}', [AboutUsController::class, 'deleteTeam'])->name('admin.about-us.team-delete');
+
     
     Route::get('about-us/testimonials', [AboutUsController::class, 'testimonials'])->name('admin.about-us.testimonials');
     Route::post('about-us/add-testimonials', [AboutUsController::class, 'addTestimonials'])->name('admin.about-us.add-testimonials');
+    Route::post('about-us/update-testimonial/{id}', [AboutUsController::class, 'updateTestimonials'])->name('admin.about-us.update-testimonials');
+    Route::get('about-us/delete-testimonial/{id}', [AboutUsController::class, 'deleteTestimonial'])->name('admin.about-us.delete-testimonial');
 
     Route::get('about-us/gallery', [AboutUsController::class, 'gallery'])->name('admin.about-us.gallery');
     Route::post('about-us/add-gallery-image', [AboutUsController::class, 'postGallery'])->name('admin.add-gallery-image');
@@ -116,6 +121,7 @@ Route::prefix('admin')->group(function () {
     Route::get('our-work/school', [OurWorkController::class, 'school'])->name('admin.our-work.school');
     Route::get('our-work/alumni', [OurWorkController::class, 'alumniProgram'])->name('admin.our-work.alumni');
     Route::post('our-work-add-alumni', [OurWorkController::class, 'postAlumniProgram'])->name('admin.work-add-alumni');
+    Route::post('admin.work-add-alumni-image', [OurWorkController::class, 'addAlumniImage'])->name('admin.work-add-alumni-image');
     Route::post('our-work-update-alumni', [OurWorkController::class, 'updateAlumniProgram'])->name('admin.work-update-alumni');
     Route::get('our-work/sewing', [OurWorkController::class, 'SewingClasses'])->name('admin.our-work.sewing');
     Route::post('our-work-add-sewing', [OurWorkController::class, 'postSewingClasses'])->name('admin.work-add-sewing');
@@ -142,6 +148,7 @@ Route::prefix('admin')->group(function () {
     Route::post('our-work/school/add-curricullum', [OurWorkController::class, 'submitSchoolCurricullum'])->name('admin.our-work.add-curricullum');
     Route::get('our-work/school/edit-curricullum', [OurWorkController::class, 'editSchoolCurricullum'])->name('admin.our-work.edit-curricullum');
     Route::get('our-work/school/edit-single-curricullum/{id}', [OurWorkController::class, 'editSingleCurricullum'])->name('admin.our-work.edit-single-curricullum');
+    Route::get('our-work/school/delete-single-curricullum/{id}', [OurWorkController::class, 'deleteSingleCurricullum'])->name('admin.our-work.delete-curricullum');
     Route::post('our-work/school/update-curricullum/{id}', [OurWorkController::class, 'updateSchoolCurricullum'])->name('admin.our-work.update-curricullum');
     // ------------------------------------------------------------------------------------------
 
@@ -154,7 +161,8 @@ Route::prefix('admin')->group(function () {
     Route::get('our-impact/delete-students/{id}', [OurImpactController::class, 'deleteStudent'])->name('admin.delete-impact.student');
     Route::get('our-impact/alumni', [OurImpactController::class, 'alumni'])->name('admin.our-impact.alumni');
     Route::post('our-impact/add-alumni', [OurImpactController::class, 'postAlumni'])->name('admin.add-impact.alumni');
-    Route::post('our-impact/update-alumni', [OurImpactController::class, 'updateAlumni'])->name('admin.update-impact.alumni');
+    Route::post('our-impact/update-alumni/{id}', [OurImpactController::class, 'updateAlumni'])->name('admin.update-impact.alumni');
+    Route::get('our-impact/delete-alumni/{id}', [OurImpactController::class, 'deleteAlumni'])->name('admin.delete-impact.alumni');
     Route::get('our-impact/community', [OurImpactController::class, 'community'])->name('admin.our-impact.community');
     Route::post('our-impact/add-community', [OurImpactController::class, 'postCommunity'])->name('admin.add-impact.community');
     Route::post('our-impact/update-community', [OurImpactController::class, 'updateCommunity'])->name('admin.update-impact.community');

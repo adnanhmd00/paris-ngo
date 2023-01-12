@@ -27,6 +27,8 @@
                             <td>{{ $director->position }}</td>
                             <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                     data-target="#update-director-{{ $director->id }}">Edit</button>
+                                    <a  class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.about-us.team-delete', $director->id) }}" >Delete</a>
+
 
                                 <!-- Edit Director Modal -->
                                 <div class="modal fade" id="update-director-{{ $director->id }}" role="dialog"
@@ -83,6 +85,7 @@
                             <td>{{ $teacher->name }}</td>
                             <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                     data-target="#update-teacher-{{ $teacher->id }}">Edit</button>
+                                    <a  class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.about-us.team-delete', $teacher->id) }}" >Delete</a>
 
                                 <!-- Edit Teacher Modal -->
                                 <div class="modal fade" id="update-teacher-{{ $teacher->id }}" role="dialog"
@@ -137,7 +140,7 @@
                             <td>{{ $headmistress->name }}</td>
                             <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                     data-target="#update-headmistress-{{ $headmistress->id }}">Edit</button>
-
+                                    <a  class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.about-us.team-delete', $headmistress->id) }}" >Delete</a>
                                 <!-- Edit Teacher Modal -->
                                 <div class="modal fade" id="update-headmistress-{{ $headmistress->id }}" role="dialog"
                                     aria-labelledby="update-headmistress-label-{{ $headmistress->id }}" aria-hidden="true">
@@ -192,6 +195,7 @@
                             <td>{{ $stiching->name }}</td>
                             <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                     data-target="#update-teacher-{{ $stiching->id }}">Edit</button>
+                                    <a  class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.about-us.team-delete', $stiching->id) }}" >Delete</a>
 
                                 <!-- Edit Teacher Modal -->
                                 <div class="modal fade" id="update-teacher-{{ $stiching->id }}" role="dialog"
@@ -247,7 +251,7 @@
                             <td>{{ $helper->name }}</td>
                             <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                     data-target="#update-teacher-{{ $helper->id }}">Edit</button>
-
+                                    <a  class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.about-us.team-delete', $helper->id) }}" >Delete</a>
                                 <!-- Edit Teacher Modal -->
                                 <div class="modal fade" id="update-teacher-{{ $helper->id }}" role="dialog"
                                     aria-labelledby="update-teacher-label-{{ $helper->id }}" aria-hidden="true">
@@ -302,7 +306,7 @@
                             <td>{{ $gardener->name }}</td>
                             <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                     data-target="#update-teacher-{{ $gardener->id }}">Edit</button>
-
+                                    <a  class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('admin.about-us.team-delete', $gardener->id) }}" >Delete</a>
                                 <!-- Edit Teacher Modal -->
                                 <div class="modal fade" id="update-teacher-{{ $gardener->id }}" role="dialog"
                                     aria-labelledby="update-teacher-label-{{ $gardener->id }}" aria-hidden="true">
