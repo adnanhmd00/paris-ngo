@@ -176,6 +176,7 @@
 <script src="assets/js/carousel.js"></script>
 <script src="{{ asset('https://checkout.razorpay.com/v1/checkout.js') }}"></script>
 <script src="{{ asset('assets/js/razorpay.js') }}"></script>
+<script src="{{ asset('assets/js/multiple-select.js') }}"></script>
 <script src="{{ asset('assets/js/razorpay-sponsor.js') }}"></script>
 
 <script>

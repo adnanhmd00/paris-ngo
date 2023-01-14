@@ -9,6 +9,7 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\ImpactController;
+use App\Http\Controllers\GetInvolvedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +66,12 @@ Route::get('gift-student-sponsorship', [HomeController::class, 'giftStudentSpons
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
 Route::get('terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions');
 Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy');
+
+
+Route::get('volunteer', [GetInvolvedController::class, 'volunteer'])->name('volunteer');
+Route::post('volunteer', [GetInvolvedController::class, 'storeVolunteer'])->name('store-volunteer');
+Route::get('work-with-us', [GetInvolvedController::class, 'workWithUs'])->name('work-with-us');
+Route::post('work-with-us', [GetInvolvedController::class, 'storeWorkWithUs'])->name('store.work-with-us');
 
 // Auth::routes();
 

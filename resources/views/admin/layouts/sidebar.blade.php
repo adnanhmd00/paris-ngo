@@ -112,9 +112,9 @@
             </a>
                 <div id="get-involved" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Donate</a>
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Volunteer</a>
-                        <a class="collapse-item" href="{{ route('admin.logo-settings') }}">Work With Us</a>
+                        <a class="collapse-item" href="#">Donate</a>
+                        <a class="collapse-item" href="{{ route('admin.volunteer') }}">Volunteer</a>
+                        <a class="collapse-item" href="{{ route('admin.work-with-us') }}">Work With Us</a>
                     </div>
                 </div>
             </li>

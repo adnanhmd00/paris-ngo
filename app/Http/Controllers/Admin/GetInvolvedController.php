@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Volunteer;
+use App\Models\WorkWithUs;
 
 class GetInvolvedController extends Controller
 {
@@ -12,10 +14,12 @@ class GetInvolvedController extends Controller
     }
 
     public function volunteer(){
-        return view('admin.get-involved.volunteer');
+        $volunteers = Volunteer::all();
+        return view('admin.get-involved.volunteer', compact('volunteers'));
     }
 
     public function workWithUs(){
-        return view('admin.get-involved.work-with-us');
+        $works = WorkWithUs::all();
+        return view('admin.get-involved.work-with-us', compact('works'));
     }
 }

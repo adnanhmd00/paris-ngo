@@ -11,6 +11,7 @@ use App\Http\Controllers\CoverImageController;
 use App\Http\Controllers\BoxTextController;
 use App\Http\Controllers\Admin\OurWorkController;
 use App\Http\Controllers\Admin\OurImpactController;
+use App\Http\Controllers\Admin\GetInvolvedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -168,6 +169,13 @@ Route::prefix('admin')->group(function () {
     Route::post('our-impact/update-community', [OurImpactController::class, 'updateCommunity'])->name('admin.update-impact.community');
     // ------------------------------------------------------------------------------------------
     
+
+    // ---------------------------------------- DONATIONS ----------------------------------------
+    Route::get('volunteer', [GetInvolvedController::class, 'volunteer'])->name('admin.volunteer');
+    Route::post('volunteer', [GetInvolvedController::class, 'storeVolunteer'])->name('admin.store.volunteer');
+    Route::get('work-with-us', [GetInvolvedController::class, 'workWithUs'])->name('admin.work-with-us');
+    Route::post('work-with-us', [GetInvolvedController::class, 'storeWorkWithUs'])->name('admin.store.work-with-us');
+    // ------------------------------------------------------------------------------------------
 
     // ---------------------------------------- DONATIONS ----------------------------------------
     Route::get('donations', [DonationController::class, 'index'])->name('admin.donations');

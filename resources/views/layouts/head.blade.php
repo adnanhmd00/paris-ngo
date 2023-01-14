@@ -31,6 +31,22 @@
             font-family: 'Fuzzy Bubbles', 'Open Sans' cursive;
 
         }
+        
+.choices__list--multiple .choices__item {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 3.75px;
+    margin-bottom: 3.75px;
+    background-color: #4479bd !important;
+    border: 1px solid #4479bd !important;
+    color: #fff;
+    word-break: break-all;
+}
+
 
         /* mobile image cover */
 
@@ -562,10 +578,10 @@
                                     data-target="#donate-box">Donate</a>
                                 </li>
                                 <li>
-                                    <a href="">Volunteer</a>
+                                    <a href="{{ route('volunteer') }}">Volunteer</a>
                                 </li>
                                 <li>
-                                    <a href="">Work With Us</a>
+                                    <a href="{{ route('work-with-us') }}">Work With Us</a>
                                 </li>
                         </ul>
                     </li>
